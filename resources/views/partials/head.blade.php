@@ -5,9 +5,9 @@
   <title> @yield('title','nothing to yield as title') </title>
   
   <!<!-- css styles -->
-  <link rel="stylesheet" href=" {{url('css/plugins.css')}} ">
-  <link rel="stylesheet" href=" {{url('css/style.css')}} ">
-  <link rel="stylesheet" href=" {{url('css/colors/yellow.css')}} ">
+  <link rel="stylesheet" href=" {{url('/css/plugins.css')}} ">
+  <link rel="stylesheet" href=" {{url('/css/style.css')}} ">
+  <link rel="stylesheet" href=" {{url('/css/colors/yellow.css')}} ">
   
    
   
@@ -43,5 +43,7 @@
 .DisplayTable td.SmallText {font-size:12px;}
 .DisplayTable td.Seperator {border:0;min-height:20px;}
   </style>
+  
+ 
   
 </head>

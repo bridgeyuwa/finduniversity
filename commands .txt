@@ -1,0 +1,53 @@
+php artisan make:model College
+php artisan make:model State
+php artisan make:model Course
+php artisan make:model Institute
+php artisan make:model Region
+php artisan make:model Degree
+
+
+findstr "^" *.txt >output.log //prepend file name to each line 
+
+
+LOAD DATA INFILE 'xinstitution_program.txt' INTO TABLE institution_program
+FIELDS TERMINATED BY '|' LINES TERMINATED BY '\n'
+(program_id,institution_id);
+
+
+SELECT username
+INTO   OUTFILE '/path/to/usernames.txt'
+FROM   forumresults ;
+
+
+
+cd xampp/htdocs/finduniversity
+
+php artisan serve --port=8000
+
+php artisan db:seed --class=CollegeSeederTable
+php artisan db:seed --class=ProgramSeederTable
+php artisan db:seed --class=InstitutionSeederTable
+php artisan db:seed --class=InstitutionProgramSeederTable
+php artisan db:seed --class=InstitutionDegreeProgramSeederTable
+php artisan db:seed --class=InstitutionNdProgramSeederTable
+php artisan db:seed --class=InstitutionNceProgramSeederTable
+
+
+
+https://github.com/staudenmeir/eloquent-has-many-deep
+
+
+php artisan make:migration create_colleges_table
+php artisan make:migration create_states_table
+php artisan make:migration create_lgas_table
+php artisan make:migration create_regions_table
+php artisan make:migration create_courses_table
+php artisan make:migration create_degrees_table
+php artisan make:migration create_terms_table
+php artisan make:migration create_institutions_table
+php artisan make:migration create_scholarships_table
+php artisan make:migration create_college_course_table
+php artisan make:migration create_course_institution_table
+php artisan make:migration create_institution_state_table
+php artisan make:migration create_institution_term_table
+php artisan make:migration create_institution_region_table
