@@ -19,7 +19,10 @@ class CreateProgramsTable extends Migration
             
             $table->unsignedBigInteger('college_id');
             $table->unsignedBigInteger('honor_id');
-            $table->text('description');
+            $table->text('description')->nullable();
+            $table->text('direct_entry_req')->nullable();
+            $table->text('utme_req')->nullable();
+            $table->text('utme_subjects')->nullable();
             
             $table->primary('id');
             $table->foreign('college_id')->references('id')->on('colleges');

@@ -3400,7 +3400,6 @@ INSERT INTO `institution_program` (`program_id`, `institution_id`) VALUES
 ('food-science' , 'LAUTECH'),
 ('food-science' , 'OSUMS'),
 ('food-science-and-engineering' , 'LAUTECH'),
-('food-science-and-technology' , ''),
 ('food-science-and-technology' , 'ABSU'),
 ('food-science-and-technology' , 'BAYERO'),
 ('food-science-and-technology' , 'BELLS'),

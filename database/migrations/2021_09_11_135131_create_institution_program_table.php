@@ -19,13 +19,16 @@ class CreateInstitutionProgramTable extends Migration {
 
             $table->text('description')->nullable();
             $table->string('duration')->nullable();
-            $table->integer('fee_high')->nullable();
-            $table->integer('fee_low')->nullable();
-            
+            $table->integer('fees')->nullable();
+            $table->text('direct_entry_req')->nullable();
+            $table->text('utme_req')->nullable();
+            $table->text('utme_subjects')->nullable();
 
-       $table->primary(['institution_id', 'program_id']);
-            $table->foreign('institution_id')->references('id')->on('institutions');
+
+
+           
             $table->foreign('program_id')->references('id')->on('programs');
+            $table->foreign('institution_id')->references('id')->on('institutions');
         });
     }
 

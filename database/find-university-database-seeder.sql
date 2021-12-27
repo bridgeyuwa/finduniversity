@@ -7,6 +7,31 @@ INSERT INTO `regions` (`id`, `name`) VALUES
 (5, 'South South'),
 (4, 'South East');
 
+INSERT INTO `terms` (`id`, `name`) VALUES
+(2, 'Semester'),
+(3, 'Tri-Semester'),
+(4, 'Quarter-Semester');
+
+INSERT INTO `colleges` (`id`, `name`) VALUES
+(1, 'Administration'),
+(2, 'Agriculture'),
+(3, 'Arts and Humanities'),
+(4, 'Education'),
+(5, 'Engineering'),
+(6, 'Law'),
+(7, 'Medical/Pharm/Health'),
+(8, 'Sciences'),
+(9, 'Social Sciences');
+
+INSERT INTO `honors` (`id`, `name`) VALUES
+(1, 'B.Sc'),
+(2, 'B.Eng'),
+(3, 'B.Tech');
+
+INSERT INTO `categories` (`id`, `name`) VALUES
+(1, 'university'),
+(2, 'polytechnic'),
+(3, 'college of education');
 
 INSERT INTO `states` (`id`, `region_id`,`name`) VALUES
 (1, '4', 'Abia'),
