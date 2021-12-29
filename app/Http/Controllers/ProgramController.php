@@ -6,20 +6,16 @@ use App\Models\Institution;
 use App\Models\State;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProgramController extends Controller
 {
     public function index() {
 
       
-        $programs = Program::all();
-        
-        
-       /* foreach($programs as $program){
-        echo "$program->id</br>";
-        }
-        * 
-        */
+        //$programs = Program::all()->paginate(100);
+        $programs = DB::table('programs')->where('college_id','<' ,200 )->paginate(100);  //workaround to be able to paginate 
+      
         
         
         return view('program.index', compact('programs'));
@@ -31,4 +27,14 @@ class ProgramController extends Controller
 
         return view('program.show', compact('program'));
     }
+    
+    
+     public function institutions($id) {
+        
+        $program = Program::find($id);
+
+       
+        return view('program.institutions', compact('program'));
+    }
+    
 }

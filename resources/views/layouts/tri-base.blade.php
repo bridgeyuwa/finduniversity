@@ -12,9 +12,18 @@
             
             <div>
                 
-                <div class="row gx-lg-8 gx-xl-12">
+                <div class="row gx-md-6 ">
                     
-                    <div class="col-lg-8 order-lg-2">
+                    <div class="col-lg-3 sidebar mt-md-6 ">
+                   
+                    <div class="sticky-top " style=" top: 90px">
+                    @yield('aside','no sidebar to yield')
+                    </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="col-lg-6 ">
                         
                       @yield('content-card','this is the default content')  
                         
@@ -22,12 +31,13 @@
                     </div>
                     
                     
+                    
+                    
+                    
                     <!-- Aside Left goes here -->
-                    <aside class="col-lg-4 sidebar mt-8 mt-lg-6">
+                    <div class="col-lg-3 sidebar mt-md-6">
                     @yield('aside','no sidebar to yield')
-                   
-                   
-                    </aside>
+                   </div>
                 </div>
             </div>
             

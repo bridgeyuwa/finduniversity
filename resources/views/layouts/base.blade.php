@@ -12,9 +12,9 @@
 
 
 
-        <div class="container">
+       
         @yield('content', 'there is no body to yield') 
-        </div>
+        
 
 
         @include('partials.footer')

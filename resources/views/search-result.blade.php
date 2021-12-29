@@ -32,7 +32,7 @@
 
     {{ $institutions->links() }}
 
-    
+
     @foreach ($institutions as $institution)
     <article class="post">
         <div class="card">
@@ -44,7 +44,7 @@
                         <a href="#" class="hover" rel="category">Ideas</a>
                     </div>
                     <!-- /.post-category -->
-                    <h2 class="post-title mt-1 mb-0"><a class="link-dark" href="/institutions/{{$institution->id}}">{{$institution->name}}</a></h2>
+                    <h2 class="post-title mt-1 mb-0 text-center"><a class="link-dark" href="/institutions/{{$institution->id}}">{{$institution->name}}</a></h2>
                 </div>
                 <!-- /.post-header -->
                 <div class="post-content">
@@ -70,11 +70,12 @@
             <!--/.card-body -->
             <div class="card-footer"> 
 
-                <ul class="nav nav-tabs nav-pills">
-                    <li class="nav-item"> <a class="nav-link active" data-bs-toggle="tab" href="#tab1-1"><i class="uil uil-phone-volume pe-1"></i><span>Support</span></a> </li>
-                    <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tab1-2"><i class="uil uil-shield-exclamation pe-1"></i><span>Payments</span></a> </li>
-                    <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tab1-3"><i class="uil uil-laptop-cloud pe-1"></i><span>Updates</span></a> </li>
-                </ul>
+
+                <div class="d-flex flex-row bd-highlight mb-3 d-flex justify-content-evenly">
+                    <div class="p-2 bd-highlight">Flex item 1</div>
+                    <div class="p-2 bd-highlight">Flex item 2</div>
+                    <div class="p-2 bd-highlight">Flex item 3</div>
+                </div>
 
             </div>
             <!-- /.card-footer -->

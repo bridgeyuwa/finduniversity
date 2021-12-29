@@ -51,6 +51,8 @@ a:hover,
 .accordion-wrapper .card-header button,
 .accordion-wrapper .card-header button:before,
 .accordion-wrapper .card-header button:hover,
+.collapse-link,
+.collapse-link:hover,
 .breadcrumb-item a:hover,
 .dropdown-toggle::after,
 .plyr--full-ui input[type=range],
@@ -58,7 +60,8 @@ a:hover,
 .banner--stick.transparent.navbar-dark .nav-link:focus,
 .banner--stick.transparent.navbar-dark .nav-link:hover,
 .banner--stick:not(.navbar-dark).navbar-dark .nav-link:focus,
-.banner--stick:not(.navbar-dark).navbar-dark .nav-link:hover {
+.banner--stick:not(.navbar-dark).navbar-dark .nav-link:hover,
+.external:hover {
   color: #6bbea3;
 }
 
@@ -66,6 +69,7 @@ a:hover,
 .text-primary,
 .text-reset a:hover,
 a.text-reset:hover,
+.list-unstyled li a.active,
 .icon-list.bullet-bg i[class*=bullet-soft-primary],
 .icon-list.bullet-bg i.bullet-white,
 .icon-list.bullet-white i,
@@ -210,6 +214,11 @@ blockquote,
   background: rgba(107, 190, 163, 0.12);
 }
 
+.underline-2.primary:after,
+.underline-2:after {
+  background: #6bbea3;
+}
+
 .bg-soft-primary {
   background-color: #f4faf8 !important;
 }
@@ -272,7 +281,7 @@ form.dark-fields .form-control:focus {
 
 .alert-primary {
   color: #4b8572;
-  background-color: #d3ece3;
+  background-color: #f0f9f6;
   border-color: #d3ece3;
 }
 

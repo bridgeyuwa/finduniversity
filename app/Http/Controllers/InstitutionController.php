@@ -7,6 +7,7 @@ use App\Models\Institution;
 use App\Models\State;
 use App\Models\Region;
 use App\Models\Program;
+use App\Models\College;
 
 class InstitutionController extends Controller {
 
@@ -16,63 +17,8 @@ class InstitutionController extends Controller {
 
         $institutions = Institution::all();
         
-      /*  foreach($institutions as $institution){
-        echo "$institution->id</br>";
-        }
-       * 
-       */
-        $i = 1;
-
- $i_name = "";
-        return view('institution.index', compact('institutions', 'i','i_name'));
-    }
-
-    public function universities() {
-
-
-
-        $institutions = Institution::where('category_id', 1)->get();
-
-        $i_name = "universities";
-
-        return view('institution.index', compact('institutions', 'i_name'));
-    }
-
-    public function polytechnics() {
-
-
-
-        $institutions = Institution::where('category_id', 2)->get();
-
-
-        $i_name = "polytechnics";
-
-        return view('institution.index', compact('institutions','i_name'));
-    }
-
-    public function monotechnics() {
-
-
-
-        $institutions = Institution::where('category_id', 3)->get();
-
-
-        $i_name = "monotechnics";
-
-
-        return view('institution.index', compact('institutions', 'i_name'));
-    }
-
-    public function collegesofeduction() {
-
-
-
-        $institutions = Institution::where('category_id', 4)->get();
-
-        $i_name = "coe";
-
-
-        return view('institution.index', compact('institutions', 'i_name'));
+    
+        return view('institution.index', compact('institutions'));
     }
 
     public function programs($id) {
@@ -95,8 +41,9 @@ class InstitutionController extends Controller {
     public function byprogram() {
 
         $programs = Program::all();
+        $colleges = college::all();
 
-        return view('institution.byprogram', compact('programs'));
+        return view('institution.byprogram', compact('programs','colleges'));
     }
 
     public function show($id) {

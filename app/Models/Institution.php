@@ -36,7 +36,8 @@ class Institution extends Model {
     public function regions() {
         return $this->hasOneThrough(Region::class, State::class);
     }
-
+    
+    
     public function schooltype() {
         return $this->belongsTo(Schooltype::class);
     }

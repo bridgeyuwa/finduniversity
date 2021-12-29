@@ -8,18 +8,7 @@
               <tr>
                 <th>#</th>
                 <th class="h3">
-                    
-                    @if($i_name =="universities")
-                    {{'UNIVERSITIES'}}
-                    @elseif($i_name =="polytechnics")
-                    {{'POLYTECHNICS'}}
-                    @elseif($i_name =="monotechnics")
-                    {{'MONOTECHNICS'}}
-                    @elseif($i_name =="coe")
-                    {{'COLLEGES OF EDUCATION'}}
-                    @else
-                    {{'INSTITUTIONS'}}
-                    @endif
+                  {{'UNIVERSITIES'}}
                     </th>
                 
                 <th>Username</th>

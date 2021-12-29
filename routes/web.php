@@ -19,11 +19,11 @@ use App\Http\Controllers\SearchController;
   |
  */
 
-//Route::view('/', 'exp');
+Route::view('/', 'exp');
 //Route::view('/studyabroad', 'studyabroad');
 
 
-Route::get('/', [HomeController::class, 'index']);
+//Route::get('/', [HomeController::class, 'index']);
 Route::get('search', [SearchController::class, 'index']);
 
 Route::get('colleges', [CollegeController::class, 'index']);
@@ -31,12 +31,7 @@ Route::get('colleges/{id}', [CollegeController::class, 'show']);
 
 Route::get('programs', [ProgramController::class, 'index']);
 Route::get('programs/{id}', [ProgramController::class, 'show']);
-
-
-Route::get('universities', [InstitutionController::class, 'universities']);
-Route::get('polytechnics', [InstitutionController::class, 'polytechnics']);
-Route::get('monotechnics', [InstitutionController::class, 'monotechnics']);
-Route::get('coe', [InstitutionController::class, 'collegesofeduction']);
+Route::get('programs/{id}/institutions', [ProgramController::class, 'institutions']);
 
 Route::get('institutions', [InstitutionController::class, 'index']);
 Route::get('institutions/by-location', [InstitutionController::class, 'bylocation']);

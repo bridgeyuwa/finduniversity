@@ -5,9 +5,9 @@
     /**
      * Theme's components/functions list
      * Comment out or delete the unnecessary component.
-     * Some component have dependencies (plugins).
-     * Do not forget to remove dependency from src/js/vendor/ and recompile it
-     */
+     * Some components have dependencies (plugins).
+     * Do not forget to remove dependency from src/js/vendor/ and recompile it.
+    */
     init: () => {
       theme.stickyHeader();
       theme.dropdownAnimation();
@@ -15,7 +15,7 @@
       theme.isotope();
       theme.onepageHeaderOffset();
       theme.onepageNavLinks();
-      theme.onepageSmoothScroll();
+      theme.anchorSmoothScroll();
       theme.svgInject();
       theme.backgroundImage();
       theme.backgroundImageMobile();
@@ -31,18 +31,20 @@
       theme.plyr();
       theme.progressBar();
       theme.pageProgress();
-      theme.pageLoading();
       theme.counterUp();
-      theme.bsTooltip();
-      theme.bsPopover();
+      theme.bsTooltips();
+      theme.bsPopovers();
       theme.bsModal();
       theme.iTooltip();
       theme.contactForm();
       theme.pricingSwitcher();
+      theme.codeSnippet();
     },
     /**
      * Sticky Header
-     */
+     * Enables sticky behavior on navigation on page scroll
+     * Requires assets/js/vendor/headhesive.min.js
+    */
     stickyHeader: () => {
       if ($(".navbar").length) {
         var options = {
@@ -65,23 +67,11 @@
         };
         var banner = new Headhesive('.navbar', options);
       }
-      $(function() {
-        $('.navbar .navbar-nav:not(.navbar-nav-other)').bind({
-          'show.smapi': function(e, menu) {
-            $(menu).removeClass('hide-animation').addClass('show-animation');
-          },
-          'hide.smapi': function(e, menu) {
-            $(menu).removeClass('show-animation').addClass('hide-animation');
-          }
-        }).on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', 'ul', function(e) {
-          $(this).removeClass('show-animation hide-animation');
-          e.stopPropagation();
-        });
-      });
     },
     /**
      * Dropdown Animation
-     */
+     * Adds a custom animation to dropdown menus
+    */
     dropdownAnimation: () => {
       $('.navbar .navbar-nav:not(.navbar-nav-other)').bind({
         'show.smapi': function(e, menu) {
@@ -97,7 +87,8 @@
     },
     /**
      * Header Buttons
-     */
+     * Open/close offcanvas menus on click of header buttons
+    */
     headerButtons: () => {
       var $header_hamburger = $('.hamburger.animate');
       var $language_select = $('.language-select .dropdown-menu');
@@ -130,7 +121,6 @@
       });
       $(document).on('click', function() {
         $navbar_offcanvas.removeClass('open');
-        /*$language_select.collapse('hide');*/
         $info_offcanvas.removeClass('open');
         $header_hamburger.removeClass('active');
       });
@@ -144,7 +134,10 @@
     },
     /**
      * Isotope
-     */
+     * Enables isotope grid layout and filtering
+     * Requires assets/js/vendor/isotope.pkgd.min.js
+     * Requires assets/js/vendor/imagesloaded.pkgd.min.js
+    */
     isotope: () => {
       // for each container
       $('.grid').each(function(i, gridContainer) {
@@ -193,7 +186,8 @@
     },
     /**
      * Onepage Header Offset
-     */
+     * Adds an offset value to anchor point equal to sticky header height on a onepage
+    */
     onepageHeaderOffset: () => {
       var header_height = $('.navbar:not(.banner--clone)').outerHeight();
       var shrinked_header_height = 75;
@@ -210,7 +204,7 @@
     },
     /**
      * Onepage Nav Links
-     */
+    */
     onepageNavLinks: () => {
       var empty_a = $('.onepage .navbar ul.navbar-nav a[href="#"]');
       empty_a.on('click', function(e) {
@@ -218,9 +212,10 @@
       });
     },
     /**
-     * Onepage Smooth Scroll
-     */
-    onepageSmoothScroll: () => {
+     * Anchor Smooth Scroll
+     * Adds smooth scroll animation to anchor links
+    */
+    anchorSmoothScroll: () => {
       $(function() {
         setTimeout(function() {
           if (location.hash) {
@@ -247,14 +242,17 @@
       });
     },
     /**
-     * SVG Inject
-     */
+     * SVGInject
+     * Replaces an img element with an inline SVG so you can apply colors to your SVGs
+     * Requires assets/js/vendor/svg-inject.min.js
+    */
     svgInject: () => {
       SVGInject(document.querySelectorAll("img.svg-inject"));
     },
     /**
      * Background Image
-     */
+     * Adds a background image link via data attribute "data-image-src"
+    */
     backgroundImage: () => {
       $(".bg-image").css('background-image', function() {
         var bg = ('url(' + $(this).data("image-src") + ')');
@@ -263,7 +261,8 @@
     },
     /**
      * backgroundImageMobile
-     */
+     * Adds .mobile class to background images on mobile devices for styling purposes
+    */
     backgroundImageMobile: () => {
       var isMobile = (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i)) ? true : false;
       if (isMobile) {
@@ -272,7 +271,8 @@
     },
     /**
      * Background Video
-     */
+     * Turns an HTML5 video into a background, scaling to aspect ratio.
+    */
     backgroundVideo: () => {
       $('.video-wrapper video').backgroundVideo({
         $outerWrap: $('.video-wrapper'),
@@ -284,13 +284,16 @@
     },
     /**
      * Image Hover Overlay
-     */
+     * Adds span.bg inside .overlay for simpler markup and styling purposes
+    */
     imageHoverOverlay: () => {
       $('.overlay:not(.caption) > a, .overlay:not(.caption) > span').prepend('<span class="bg"></span>');
     },
     /**
-     * Rellax
-     */
+     * Rellax.js
+     * Adds parallax animation to shapes and elements
+     * Requires assets/js/vendor/rellax.min.js
+    */
     rellax: () => {
       if ($(".rellax").length) {
         window.onload = function(){
@@ -306,8 +309,10 @@
       }
     },
     /**
-     * scrollCue
-     */
+     * scrollCue.js
+     * Enables showing elements by scrolling
+     * Requires assets/js/vendor/scrollCue.min.js
+    */
     scrollCue: () => {
       scrollCue.init({
         interval: -400,
@@ -318,7 +323,9 @@
     },
     /**
      * Show More Items
-     */
+     * Loads more elements for lists
+     * Requires assets/js/vendor/showMoreItems.min.js
+    */
     showMoreItems: () => {
       $('.show-more').each(function() {
         var $showmore = $(this);
@@ -336,7 +343,9 @@
     },
     /**
      * Owl Carousel
-     */
+     * Creates carousel sliders
+     * Requires assets/js/vendor/owl.carousel.min.js
+    */
     owlCarousel: () => {
       $('.basic-slider').each(function() {
         var $bslider = $(this);
@@ -369,7 +378,9 @@
     },
     /**
      * Hero Slider
-     */
+     * Creates hero sliders with animated captions
+     * Requires assets/js/vendor/owl.carousel.min.js
+    */
     heroSlider: () => {
       $('.hero-slider').each(function() {
         var $hslider = $(this);
@@ -411,7 +422,9 @@
     },
     /**
      * Animated Captions
-     */
+     * Enables data attributes "data-anim-delay" and "data-anim-duration" for .animated-caption
+     * Requires assets/css/vendor/animate.css
+    */
     animatedCaptions: () => {
       var $animatedCaptions = $(".animated-captions");
       $animatedCaptions.find(".animated-caption").each(function() {
@@ -425,7 +438,9 @@
     },
     /**
      * Lightgallery
-     */
+     * Enables lightbox functionality
+     * Requires assets/js/vendor/lightgallery.min.js
+    */
     lightGallery: () => {
       var $lg = $('.light-gallery-wrapper');
       $lg.lightGallery({
@@ -448,8 +463,10 @@
       });
     },
     /**
-     * Media Player
-     */
+     * Plyr
+     * Enables media player
+     * Requires assets/js/vendor/plyr.js
+    */
     plyr: () => {
       var players = Plyr.setup('.player', {
         loadSprite: true,
@@ -457,7 +474,9 @@
     },
     /**
      * Progressbar
-     */
+     * Enables animated progressbars
+     * Requires assets/js/vendor/progressbar.min.js
+    */
     progressBar: () => {
       var $pline = $('.progressbar.line');
       $pline.each(function(i) {
@@ -492,7 +511,8 @@
     },
     /**
      * Page Progress
-     */
+     * Shows page progress on the bottom right corner of the page
+    */
     pageProgress: () => {
       if ($(".progress-wrap").length) {
         var progressPath = document.querySelector('.progress-wrap path');
@@ -529,15 +549,11 @@
       }
     },
     /**
-     * Page Loading
-     */
-    pageLoading: () => {
-      $('.page-loading').delay(350).fadeOut('slow');
-      $('.page-loading .status').fadeOut('slow');
-    },
-    /**
      * Counter Up
-     */
+     * Counts up to a targeted number when the number becomes visible
+     * Requires assets/js/vendor/counterup.min.js
+     * Requires assets/js/vendor/jquery.waypoints.min.js
+    */
     counterUp: () => {
       var counterUp = window.counterUp["default"]; // import counterUp from "counterup2"	
       var $counters = $(".counter");
@@ -557,28 +573,31 @@
       });
     },
     /**
-     * Bootstrap Tooltip
-     */
-    bsTooltip: () => {
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('.has-tooltip'))
-      var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+     * Bootstrap Tooltips
+     * Enables Bootstrap tooltips
+     * Requires Poppers library
+    */
+    bsTooltips: () => {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
       })
     },
     /**
-     * Bootstrap Popover
-     */
-    bsPopover: () => {
-      var popoverTriggerList = [].slice.call(document.querySelectorAll('.has-popover'), {
-        trigger: 'focus'
-      })
-      var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+     * Bootstrap Popovers
+     * Enables Bootstrap popovers
+     * Requires Poppers library
+    */
+    bsPopovers: () => {
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         return new bootstrap.Popover(popoverTriggerEl)
       })
     },
     /**
      * Bootstrap Modal
-     */
+     * Enables Bootstrap modals and modal popup
+    */
     bsModal: () => {
       var scr_size = window.innerWidth;
       var scr_avail = $('body').innerWidth();
@@ -604,7 +623,9 @@
     },
     /**
      * iTooltip
-     */
+     * Enables custom tooltip style for image hover docs/elements/hover.html
+     * Requires assets/js/vendor/itooltip.min.js
+    */
     iTooltip: () => {
       var tooltip = new iTooltip('.itooltip')
       tooltip.init({
@@ -617,45 +638,55 @@
     },
     /**
      * Contact Form
-     */
+     * Contact form validation (Bootstrap) sends messages when validated and shows success/fail messages
+    */
     contactForm: () => {
-      $('.contact-form').validator({
-        disable: false,
-        focus: false
-      });
-      // when the form is submitted
-      $('.contact-form').on('submit', function(e) {
-        // if the validator does not prevent form submit
-        if (!e.isDefaultPrevented()) {
-          var url = "php/contact.php";
-          // POST values in the background the the script URL
-          $.ajax({
-            type: "POST",
-            url: url,
-            data: $(this).serialize(),
-            success: function(data) {
-              // data = JSON object that contact.php returns
-              // we recieve the type of the message: success x danger and apply it to the
-              var messageAlert = 'alert-' + data.type;
-              var messageText = data.message;
-              // let's compose Bootstrap alert box HTML
-              var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissible fade show"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' + messageText + '</div>';
-              // If we have messageAlert and messageText
-              if (messageAlert && messageText) {
-                // inject the alert to .messages div in our form
-                $('.contact-form').find('.messages').html(alertBox);
-                // empty the form
-                $('.contact-form')[0].reset();
+      (function() {
+        "use strict";
+        window.addEventListener("load", function() {
+          var forms = document.getElementsByClassName("needs-validation");
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener("submit", function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
               }
-            }
+              form.classList.add("was-validated");
+              // Here you are going to add your ajax call after checking if the form validation is valid
+              if (form.checkValidity() === true) {
+                event.preventDefault();
+                // To reset the appearance of the form (for instance, in the case of dynamic form submissions using AJAX), remove the .was-validated class from the <form> again after submission. (boostrap doc)
+                form.classList.remove("was-validated");
+                $.ajax({
+                  type: "POST",
+                  url: "assets/php/contact.php",
+                  data: $(this).serialize(),
+                  success: function(data) {
+                    // data = JSON object that contact.php returns
+                    // we recieve the type of the message: success x danger and apply it to the
+                    var messageAlert = 'alert-' + data.type;
+                    var messageText = data.message;
+                    // let's compose Bootstrap alert box HTML
+                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissible fade show"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' + messageText + '</div>';
+                    // If we have messageAlert and messageText
+                    if (messageAlert && messageText) {
+                      // inject the alert to .messages div in our form
+                      $('.contact-form').find('.messages').html(alertBox);
+                      // empty the form
+                      $('.contact-form')[0].reset();
+                    }
+                  }
+                });
+              }
+            }, false);
           });
-          return false;
-        }
-      })
+        }, false);
+      })();
     },
     /**
      * Pricing Switcher
-     */
+     * Enables monthly/yearly switcher seen on pricing tables
+    */
     pricingSwitcher: () => {
       $('.pricing-wrapper').each(function(i, container) {
         var $container = $(container);
@@ -664,6 +695,38 @@
           $container.find(".price").removeClass('price-hidden');
           $container.find(".price").toggleClass('price-show price-hide');
         });
+      });
+    },
+    /**
+     * Clipboard.js
+     * Enables clipboard on docs
+     * Requires assets/js/vendor/clipboard.min.js
+    */
+    codeSnippet: () => {
+      var btnHtml = '<button type="button" class="btn btn-sm btn-white rounded-pill btn-clipboard">Copy</button>'
+      document.querySelectorAll('.code-wrapper-inner')
+        .forEach(function (element) {
+          element.insertAdjacentHTML('beforebegin', btnHtml)
+        })
+      var clipboard = new ClipboardJS('.btn-clipboard', {
+        target: function (trigger) {
+          return trigger.nextElementSibling
+        }
+      })
+      clipboard.on('success', event => {
+        event.trigger.textContent = 'Copied!';
+        event.clearSelection();
+        setTimeout(() => {
+          event.trigger.textContent = 'Copy Image Code';
+        }, 2000);
+      });
+      var copyIconCode = new ClipboardJS('.btn-copy-icon');
+      copyIconCode.on('success', function(event) {
+        event.clearSelection();
+        event.trigger.textContent = 'Copied!';
+        window.setTimeout(function() {
+          event.trigger.textContent = 'Copy';
+        }, 2300);
       });
     },
   }

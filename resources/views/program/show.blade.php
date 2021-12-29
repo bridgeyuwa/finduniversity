@@ -30,49 +30,12 @@
         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Calibri, sans-serif;    white-space: pre-wrap;">Students who want to pursue a degree in&nbsp; Electronics and Communications Engineering are encouraged to take the Science, Technology, Engineering, and Mathematics (STEM) strand under the Academic Track. They will learn topics relevant that will be useful in their college life.&nbsp;</span></p><br>
 
 
+        <h2> <a href="{{url("/programs/{$program->id}/institutions")}}">Institutions Offering {{$program->name}} ({{count($program->institutions)}}) </a> </h2>
 
 
 
-        <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-family: Calibri, sans-serif; font-weight: 700;    white-space: pre-wrap;"><span style="font-size: 18pt;">Subjects and Curriculum</span></span></p>
-
-
-        <ul style="margin-top:0;margin-bottom:0;">
-
-
-   <li>Advanced Engineering Mathematics for ECE</li>
-
-
-   <li>Computer Methods in ECE</li>
-
-
-   <li>Electromagnetics</li>
-
-
-   <li>ECE Laws, Contracts, Ethics &amp; Standards</li>
-
-
-   <li>Electronics 1 and 2</li>
-
-
-   <li>Communications 1 and 2</li>
-
-
-   <li>Logic Circuits and Switching Theory</li>
-
-
-   <li>Microprocessor and Microcontroller Systems</li>
-
-
-   <li>Feedback and Control Systems</li>
-
-
-   <li>Methods of Research</li>
-
-
-   <li>Design 1 and 2</li>
-
-
-        </ul><br>
+     
+        
 
 
 
@@ -87,7 +50,7 @@
         <ul style="margin-top:0;margin-bottom:0;">
 
 
-   <li>The student must be a high school graduate. </li>
+            <li>The student must be a high school graduate. </li>
 
         </ul><span style="font-family: Calibri, sans-serif; font-size: 11pt;    >However, if they were not able to graduate high school, they may opt to take the<span style="font-weight: bold;"> Alternative Learning System (ALS)</span> </span></span>
 
@@ -216,8 +179,8 @@
 
 
 
-        @endsection
+@endsection
 
-        @section('aside')
-        Advertisements and promotions!!!
-        @endsection
+@section('aside')
+Advertisements and promotions!!!
+@endsection
