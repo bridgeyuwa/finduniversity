@@ -4,7 +4,7 @@
 
 
 
-@section('content-card')
+@section('content')
 
 
 <div class="card">
@@ -13,7 +13,7 @@
         <div class="row g-m-6">
             @foreach( $programs as $program )
 
-            <div class="col-lg-4 col-md-6 ">
+            <div class="col-12 ">
                 
                 <div class="accordion accordion-wrapper" id="accordionExample">
             <div class="card accordion-item">

@@ -1,6 +1,6 @@
 @extends('layouts.tri-base')
 
-@section('content-card')
+@section('content')
 
 
 

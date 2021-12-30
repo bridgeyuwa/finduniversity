@@ -1,7 +1,7 @@
 @extends('layouts.tri-base')
 
 
-@section('content-card')
+@section('content')
 
 <section>
     <div>
@@ -35,7 +35,7 @@
 
     @foreach ($institutions as $institution)
     <article class="post">
-        <div class="card">
+        <div class="card wrapper image-wrapper bg-image" data-image-src="/img/photos/bg22.png">
 
             <!-- /.post-slider -->
             <div class="card-body">

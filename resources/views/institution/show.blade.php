@@ -1,7 +1,7 @@
 @extends('layouts.tri-base')
 
 
-@section('content-card')
+@section('content')
 
 <div class="blog classic-view py-14 py-md-16">
 

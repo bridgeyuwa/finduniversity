@@ -14,7 +14,7 @@ class ProgramController extends Controller
 
       
         //$programs = Program::all()->paginate(100);
-        $programs = DB::table('programs')->where('college_id','<' ,200 )->paginate(100);  //workaround to be able to paginate 
+        $programs = DB::table('programs')->where('college_id','<' ,200 )->paginate(85);  //workaround to be able to paginate 
       
         
         

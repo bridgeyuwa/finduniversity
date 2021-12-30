@@ -29,30 +29,12 @@
 
 
 
-                    <div class="col-lg-6 ">
+                    <div class="col-lg-9 ">
 
                         @yield('content','this is the default content')  
 
 
                     </div>
-
-
-
-
-
-                    <!-- Aside Left goes here -->
-                    <div class="col-lg-3 sidebar mt-md-6">
-                        @yield('aside','no sidebar to yield')
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
 
         </section>
 

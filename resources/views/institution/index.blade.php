@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.bi-base')
 
 
 @section('content')
@@ -6,12 +6,12 @@
 <table class="table table-striped" >
             <thead class="thead-inverse">
               <tr>
-                <th>#</th>
+                <th></th>
                 <th class="h3">
                   {{'UNIVERSITIES'}}
                     </th>
                 
-                <th>Username</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>

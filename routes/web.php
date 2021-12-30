@@ -20,10 +20,10 @@ use App\Http\Controllers\SearchController;
  */
 
 Route::view('/', 'exp');
-//Route::view('/studyabroad', 'studyabroad');
+Route::view('/studyabroad', 'studyabroad');
 
 
-//Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 Route::get('search', [SearchController::class, 'index']);
 
 Route::get('colleges', [CollegeController::class, 'index']);

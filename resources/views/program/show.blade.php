@@ -1,6 +1,6 @@
 @extends('layouts.tri-base')
 
-@section('content-card')
+@section('content')
 
 
 <h1>BEng in Electrical and Electronics Engineering in Nigeria</h1>
