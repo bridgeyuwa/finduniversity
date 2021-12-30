@@ -7,7 +7,7 @@
 
 
 <div class="blog classic-view py-14 py-md-16">
-    <div class="card">
+   
 
 
         <div class="row g-m-6">
@@ -34,7 +34,7 @@
         </div>
 
 
-    </div>
+    
 </div>
 
 

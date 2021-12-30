@@ -4,10 +4,10 @@
               <div class="col-md-4 col-lg-3">
                 <div class="widget">
                   <img class="mb-4" src="/img/logo-light.png" srcset="/img/logo-light@2x.png 2x" alt="" />
-                  <p class="mb-4">© 2021 Sandbox. <br class="d-none d-lg-block" />All rights reserved.</p>
+                  <p class="mb-4">© 2022 Bridges. <br class="d-none d-lg-block" />All rights reserved.</p>
                   <nav class="nav social social-white">
-                    <a href="#"><i class="uil uil-twitter"></i></a>
-                    <a href="#"><i class="uil uil-facebook-f"></i></a>
+                    <a href="http://twitter.com/bridgesyuwa"><i class="uil uil-twitter"></i></a>
+                    <a href=""><i class="uil uil-facebook-f"></i></a>
                     <a href="#"><i class="uil uil-dribbble"></i></a>
                     <a href="#"><i class="uil uil-instagram"></i></a>
                     <a href="#"><i class="uil uil-youtube"></i></a>
@@ -20,8 +20,8 @@
               <div class="col-md-4 col-lg-3">
                 <div class="widget">
                   <h4 class="widget-title text-white mb-3">Get in Touch</h4>
-                  <address class="pe-xl-15 pe-xxl-17">Moonshine St. 14/05 Light City, London, United Kingdom</address>
-                  <a href="mailto:#">info@email.com</a><br /> +00 (123) 456 78 90
+                  <address class="pe-xl-15 pe-xxl-17">Nyiman Layout Makurdi, Benue, Nigeria</address>
+                  <a href="mailto:#">bridgeyuwa@gmail.com</a><br /> +234 (0) 902 100 4028
                 </div>
                 <!-- /.widget -->
               </div>
@@ -47,7 +47,7 @@
                   <div class="newsletter-wrapper">
                     <!-- Begin Mailchimp Signup Form -->
                     <div id="mc_embed_signup2">
-                      <form action="https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a" method="post" id="mc-embedded-subscribe-form2" name="mc-embedded-subscribe-form" class="validate dark-fields" target="_blank" novalidate>
+                      <form action="#" method="post" id="mc-embedded-subscribe-form2" name="mc-embedded-subscribe-form" class="validate dark-fields" target="_blank" novalidate>
                         <div id="mc_embed_signup_scroll2">
                           <div class="mc-field-group input-group form-floating">
                             <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email Address" id="mce-EMAIL2">

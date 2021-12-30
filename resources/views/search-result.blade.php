@@ -4,7 +4,7 @@
 @section('content')
 
 <section>
-    <div>
+    <div class="text-aqua">
         <h1>Schools offering @if(isset($program)){{$program->name}} @endif courses in Nigeria</h1>            
         A list of  Universities, Polytechnics and Colleges offering @if(isset($program)){{$program->name}} @endif courses in Nigeria.&nbsp;
         Whenever possible we provide full details about the courses in each of the schools, including tuition fees, admission requirements, course description and the admission phone number. 
@@ -37,16 +37,11 @@
     <article class="post">
         <div class="card wrapper image-wrapper bg-image" data-image-src="/img/photos/bg22.png">
 
-            <!-- /.post-slider -->
+           
             <div class="card-body">
                 <div class="post-header">
-                    <div class="post-category text-line">
-                        <a href="#" class="hover" rel="category">Ideas</a>
-                    </div>
-                    <!-- /.post-category -->
                     <h2 class="post-title mt-1 mb-0 text-center"><a class="link-dark" href="/institutions/{{$institution->id}}">{{$institution->name}}</a></h2>
                 </div>
-                <!-- /.post-header -->
                 <div class="post-content">
 
 

@@ -11,12 +11,12 @@
 
 
 
-        <section class="container">
+        <section class="wrapper image-wrapper bg-image" data-image-src="/img/photos/bg5.jpg">
 
 
 
 
-            <div class="wrapper bg-light">
+            <div class="container wrapper">
 
                 <div class="row gx-md-6 ">
 
