@@ -26,8 +26,8 @@ Route::view('/studyabroad', 'studyabroad');
 Route::get('/', [HomeController::class, 'index']);
 Route::get('search', [SearchController::class, 'index']);
 
-Route::get('colleges', [CollegeController::class, 'index']);
-Route::get('colleges/{id}', [CollegeController::class, 'show']);
+//Route::get('colleges', [CollegeController::class, 'index']); to be removed
+//Route::get('colleges/{id}', [CollegeController::class, 'show']); to be removed
 
 Route::get('programs', [ProgramController::class, 'index']);
 Route::get('programs/{id}', [ProgramController::class, 'show']);

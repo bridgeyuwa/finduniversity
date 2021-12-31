@@ -35,7 +35,7 @@
 
     @foreach ($institutions as $institution)
     <article class="post">
-        <div class="card wrapper image-wrapper bg-image" data-image-src="/img/photos/bg22.png">
+        <div class="card bg-body">
 
            
             <div class="card-body">
@@ -47,9 +47,6 @@
 
                     <ul>
                         <li>{{$institution->schooltype->name}} {{$institution->category->name}},  {{$institution->state->name}}</li>
-                        <li>Apply to this Institution</li>
-                        <li>BS in Computer Science</li>
-                        <li>MS in Computer Science</li>
                         <li>Bachelor's ₦ 60,000-90,000 per year</li>
                         <li>Master's ₦ 22,500-40,000 per year</li>
                     </ul>
