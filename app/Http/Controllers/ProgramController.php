@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Program;
 use App\Models\Institution;
 use App\Models\State;
+use App\Models\College;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,25 +17,37 @@ class ProgramController extends Controller
         //$programs = Program::all()->paginate(100);
         $programs = DB::table('programs')->where('college_id','<' ,200 )->paginate(85);  //workaround to be able to paginate 
       
+        $states = State::all();
+        $colleges = College::all();
         
-        
-        return view('program.index', compact('programs'));
+        return view('program.index', compact('programs','states','colleges'));
     }
     
     public function show($id) {
         
         $program = Program::find($id);
+        
+         $programs = Program::all();
+       $states = State::all();
+        $colleges = College::all();
+        
+        
+        
 
-        return view('program.show', compact('program'));
+        return view('program.show', compact('program','programs','colleges','states'));
     }
     
     
      public function institutions($id) {
         
         $program = Program::find($id);
+         $programs = Program::all();
+       $states = State::all();
+        $colleges = College::all();
+       
 
        
-        return view('program.institutions', compact('program'));
+        return view('program.institutions', compact('program','programs','colleges','states'));
     }
     
 }

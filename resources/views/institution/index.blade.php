@@ -1,6 +1,13 @@
 @extends('layouts.bi-base')
 
 
+@section('search')<!-- comment -->
+
+@include('partials.search')
+
+@endsection
+
+
 @section('content')
 
 

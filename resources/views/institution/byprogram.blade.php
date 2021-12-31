@@ -1,10 +1,14 @@
 @extends('layouts.base')
 
+
+
 @section('content')
 
+<div class="container">
+@include('partials.search')
+</div>
 
-<hr>
-
+<div class="container">
 <div class="card">
     <div class="card-body">
         <div class="row g-6" data-masonry='{"percentPosition": true }'>
@@ -46,6 +50,7 @@
         </div>
         <!-- /.row -->
     </div>
+</div>
 </div>
 
 

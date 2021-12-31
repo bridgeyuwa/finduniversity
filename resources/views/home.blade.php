@@ -80,17 +80,46 @@
             <div class="col-sm-6 p-3">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title">Colleges by Field of Study</h2>
+                        <h2 class="card-title">Universities by Field of Study</h2>
 
-                        <ul class="list-unstyled ">
+                        <ul class="list-group card-text">
 
                             <!-- foreachstart -->
 
-                            <li><a class="dropdown-item scroll" href= " programs/id/institutions" class="hover" title="Universities &amp; colleges offering computer science courses">Computer science schools<i class="fas fa-arrow-right"></i></a></li>
-
-                            <!<!-- foreachend -->
+                            <li><a  href= " programs/medicine-and-surgery/institutions" class="hover" title="universities offering Medicine and Surgery courses">Medicine and Surgery schools<i class="fas fa-arrow-right"></i></a></li>
+                            <li><a  href= " programs/law/institutions" class="hover" title="universities offering law courses">Law schools<i class="fas fa-arrow-right"></i></a></li>
+                            <li><a  href= " programs/accounting/institutions" class="hover" title="universities offering accounting courses">Accounting schools<i class="fas fa-arrow-right"></i></a></li>
+                            <li><a  href= " programs/civil-engineering/institutions" class="hover" title="universities offering civil Engineering courses">Civil Engineering schools<i class="fas fa-arrow-right"></i></a></li>
+                            <li><a  href= " programs/architecture/institutions" class="hover" title="universities offering architecture courses">Architecture schools<i class="fas fa-arrow-right"></i></a></li>
+                            <li><a  href= " programs/economics/institutions" class="hover" title="universities offering economics courses">Economics schools<i class="fas fa-arrow-right"></i></a></li>
+                            <li><a  href= " programs/electrical-electronics-engineering/institutions" class="hover" title="universities offering electrical and electronics courses">Electrical and Electronics Engineering schools<i class="fas fa-arrow-right"></i></a></li>
                         </ul>
+                        <div class="align-items-center"> <a href="institutions/by-program" class="btn btn-primary">View All Field of Study</a> </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 p-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Universities by Location</h2>
+                        
+                        
+                          <ul class="list-group card-text">
 
+                            <!-- foreachstart -->
+
+                            <li><a  href= " /search?location=25" class="hover" title="universities in Lagos">Lagos<i class="fas fa-arrow-right"></i></a></li>
+                            <li><a  href= " /search?location=15" class="hover" title="universities in Abuja">Abuja<i class="fas fa-arrow-right"></i></a></li>
+                            <li><a  href= " /search?location=19" class="hover" title="universities in Kaduna">Kaduna<i class="fas fa-arrow-right"></i></a></li>
+                            <li><a  href= " /search?location=7" class="hover" title="universities in Benue">Benue<i class="fas fa-arrow-right"></i></a></li>
+                            <li><a  href= " /search?location=28" class="hover" title="universities in Ogun">Ogun<i class="fas fa-arrow-right"></i></a></li>
+                            <li><a  href= " /search?location=31" class="hover" title="universities in Oyo">Oyo<i class="fas fa-arrow-right"></i></a></li>
+                            <li><a  href= " /search?location=27" class="hover" title="universities in Niger">Niger<i class="fas fa-arrow-right"></i></a></li>
+                        </ul>
+                        
+                        
+                        <div> <a href="institutions/by-location" class="btn btn-primary">View All Locations</a> </div>
                     </div>
                 </div>
             </div>
@@ -106,18 +135,9 @@
             <div class="col-sm-6 p-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
+                        <h2 class="card-title">University Ranking</h2>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 p-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">View Full Ranking</a>
                     </div>
                 </div>
             </div>

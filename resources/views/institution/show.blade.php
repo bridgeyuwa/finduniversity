@@ -1,6 +1,14 @@
 @extends('layouts.tri-base')
 
 
+@section('search')<!-- comment -->
+
+@include('partials.search')
+
+@endsection
+
+
+
 @section('content')
 
 <section>
@@ -46,12 +54,6 @@
 
                     <li>
                         <p>
-                            <strong>Religious affiliation:</strong> Non-sectarian
-                        </p>
-                    </li>
-
-                    <li>
-                        <p>
                             <strong>Term structure:</strong> {{$institution->term->name}}
                         </p>
                     </li>
@@ -74,7 +76,7 @@
 
                     <div class="col col--1of2">
                         <div class="fee">
-                            <p><strong>Bachelor's&nbsp;degree:</strong></p>
+                            <p><strong>Bachelor's degree:</strong></p>
                             <p>
                                 <span class="Amount">₦ 80,000-120,000</span> per year
 
@@ -95,11 +97,10 @@
 
                     <li><a href=" {{url("institutions/{$institution->id}/courses")}}">Bachelor's courses</a> ({{count($institution->programs)}})</li>
 
-                    <li><a href="institutions/id/cert-courses">Diploma courses</a> (3)</li>
+                    <li><a href="#">Masters courses</a> (3)</li>
 
-                    <li><a href="institutions/id/cert-courses">Certificate courses</a> (3)</li>
+                    <li><a href="#">Doctorate courses </a> (3)</li>
 
-                    <li><a href="institutions/id/cert-courses">Certificate courses</a> (3)</li>
 
                 </ul>
                 <ul>
@@ -118,7 +119,7 @@
                     <i class="fas fa-clipboard-list"></i>
                     Rankings
                 </h3>
-                <p>Based on the FindUniversity.ph Weighted Board Exams Ranking</p>
+                <p>Based on Webometrics Web Presence Ranking</p>
                 <table>
 
                     <tbody><tr>

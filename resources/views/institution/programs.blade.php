@@ -1,5 +1,14 @@
 @extends('layouts.tri-base')
 
+
+@section('search')
+
+@include('partials.search')
+
+@endsection
+
+
+
 @section('content')
 
 

@@ -1,7 +1,11 @@
 @extends('layouts.tri-base')
 
 
+@section('search')<!-- comment -->
 
+@include('partials.search')
+
+@endsection
 
 
 @section('content')

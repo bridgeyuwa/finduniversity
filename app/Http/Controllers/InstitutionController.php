@@ -16,41 +16,50 @@ class InstitutionController extends Controller {
 
 
         $institutions = Institution::all();
-        
-    
-        return view('institution.index', compact('institutions'));
+        $programs = Program::all();
+        $colleges = College::all();
+        $states = State::all();
+
+        return view('institution.index', compact('institutions','programs','colleges','states'));
     }
 
     public function programs($id) {
 
         $institution = Institution::find($id);
 
+        $programs = Program::all();
+        $colleges = College::all();
+        $states = State::all();
 
-
-        return view('institution.programs', compact('institution'));
+        return view('institution.programs', compact('institution', 'programs', 'colleges', 'states'));
     }
 
     public function bylocation() {
 
         $states = State::all();
         $regions = Region::all();
+        $colleges = College::all();
 
-        return view('institution.bylocation', compact('states', 'regions'));
+        return view('institution.bylocation', compact('states', 'regions', 'colleges'));
     }
 
     public function byprogram() {
 
         $programs = Program::all();
-        $colleges = college::all();
+        $colleges = College::all();
+        $states = State::all();
 
-        return view('institution.byprogram', compact('programs','colleges'));
+        return view('institution.byprogram', compact('programs', 'colleges', 'states'));
     }
 
     public function show($id) {
 
         $institution = Institution::find($id);
+        $programs = Program::all();
+        $colleges = College::all();
+        $states = State::all();
 
-        return view('institution.show', compact('institution'));
+        return view('institution.show', compact('institution', 'programs', 'colleges', 'states'));
     }
 
 }

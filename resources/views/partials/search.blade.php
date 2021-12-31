@@ -1,5 +1,5 @@
 <section >
-    <form method="get" action="search">
+    <form method="get" action="   {{url("/search")}}">
         <div class="container py-3 ">
 
             <div class="row py-3 px-lg-5 border rounded bg-gradient-blue ">

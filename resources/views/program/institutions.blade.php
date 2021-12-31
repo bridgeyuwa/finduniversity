@@ -1,5 +1,13 @@
 @extends('layouts.tri-base')
 
+
+
+@section('search')<!-- comment -->
+
+@include('partials.search')
+
+@endsection
+
 @section('content')
 
 
@@ -21,7 +29,7 @@
                     <div class="card accordion-item">
                         <div class="card-header text-center" id="headingOne">
 
-                            <a href="institutions/{{$institution->id}}" > {{$institution->name}}</a> 
+                            <a href="{{url("institutions/{$institution->id}")}}" > {{$institution->name}}</a> 
 
                         </div>
                     </div>
