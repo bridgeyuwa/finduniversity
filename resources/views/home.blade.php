@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('content')
-<section class="wrapper image-wrapper bg-image text-white" data-image-src="/pexels1.jpg">
+<section class="wrapper image-wrapper bg-image text-white" data-image-src="/img/photos/bg5.jpg">
     <div class="container pt-17 pb-13 pt-md-19 pb-md-17 text-center">
         <div class="row">
             <div class="col-md-10 col-xl-8 mx-auto">
