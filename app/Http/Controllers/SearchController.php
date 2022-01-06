@@ -94,8 +94,9 @@ class SearchController extends Controller {
 
 
         $program = Program::find($program_id);
+        $state = State::find($location);
 
-        return view('search-result', compact('institutions', 'states', 'colleges', 'program'));
+        return view('search-result', compact('institutions', 'states', 'colleges', 'program','state'));
     }
 
 }
