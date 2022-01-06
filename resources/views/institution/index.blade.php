@@ -1,5 +1,10 @@
 @extends('layouts.bi-base')
+@section('title','List of All Universities in Nigeria')
 
+@section('description')
+A list of all Universities in Nigeria accredited by The National Universities Commission (NUC) with their location (states).  
+(Federal, State, Private)
+@endsection
 
 @section('search')<!-- comment -->
 
@@ -13,9 +18,9 @@
 
 <section>
     <div class="text-aqua">
-        <h1>Schools offering  courses in Nigeria</h1>            
-        A list of  Universities, Polytechnics and Colleges offering  courses in Nigeria.&nbsp;
-        Whenever possible we provide full details about the courses in each of the schools, including tuition fees, admission requirements, course description and the admission phone number. 
+        <h1>Universities in Nigeria</h1>  
+        
+        A list of all Universities in Nigeria accredited by the Nigerian Universities Commission (N.U.C).
 
         <hr class="m-4">
     </div>

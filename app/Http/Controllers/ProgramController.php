@@ -16,11 +16,11 @@ class ProgramController extends Controller
       
         //$programs = Program::all()->paginate(100);
         $programs = DB::table('programs')->where('college_id','<' ,200 )->paginate(85);  //workaround to be able to paginate 
-      
+      $programcount = Program::all(); // passed just to be able to count total programs
         $states = State::all();
         $colleges = College::all();
         
-        return view('program.index', compact('programs','states','colleges'));
+        return view('program.index', compact('programs','states','colleges','programcount'));
     }
     
     public function show($id) {

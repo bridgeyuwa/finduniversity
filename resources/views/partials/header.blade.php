@@ -8,23 +8,22 @@
                     <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
                 </div>
                 <ul class="navbar-nav">
-                    
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#!">Institutions</a>
+
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{url('/institutions')}}">Institutions</a>
+
                         <ul class="dropdown-menu">
-                            <li class="nav-item"><a class="dropdown-item" href="{{url('/universities')}}">Universities</a></li>
-                            <li class="nav-item"><a class="dropdown-item" href="{{url('/polytechnics')}}">Polytechnics</a></li>
-                            <li class="nav-item"><a class="dropdown-item" href="{{url('/monotechnics')}}">Monotechnics</a></li>
-                            <li class="nav-item"><a class="dropdown-item" href="{{url('/coe')}}">Colleges of Education</a></li>
-                            <li class="nav-item"><a class="dropdown-item" href="{{url('/institutions')}}">All Institutions</a></li>
-                            
+                            <li class="dropdown"><a class="dropdown-item" href="{{url('/institutions')}}">All Institutions</a> </li>
+                            <li class="dropdown"><a class="dropdown-item " href="{{url('/institutions/by-location')}}">Institutions by Location</a> </li>
+                            <li class="dropdown"><a class="dropdown-item" href="{{url('/institutions/by-program')}}">Institutions by Programme</a> </li>
                         </ul>
+
                     </li>
-             
-                    
-                     <li class="nav-item dropdown"><a class="nav-link " href="{{url('/programs')}}">Programs Library</a> </li>
-                   
-                    
-                    
+
+
+                    <li class="nav-item dropdown"><a class="nav-link " href="{{url('/programs')}}">Programs Library</a> </li>
+
+
+
                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#!">Levels</a>
                         <ul class="dropdown-menu">
                             <li class="dropdown"><a class="dropdown-item " href="#">Degree Awarding</a> </li>
@@ -33,10 +32,10 @@
                             <li class="dropdown"><a class="dropdown-item" href="#">Certificate</a> </li>
                         </ul>
                     </li>
-                    
-                   <li class="nav-item dropdown"><a class="nav-link " href="{{url('/blog')}}">Blog</a> </li>
-                   
-                    
+
+                    <li class="nav-item dropdown"><a class="nav-link " href="{{url('/blog')}}">Blog</a> </li>
+
+
                     <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a>
                         <ul class="dropdown-menu mega-menu">
                             <li class="mega-menu-content">

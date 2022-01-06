@@ -12,7 +12,7 @@
               <div class="col-md-4 text-center">
                   <div class="icon btn btn-circle btn-lg btn-soft-primary disabled mx-auto mb-4"> <i class="uil uil-presentation-check"></i> </div>
                 <h3 class="counter counter-lg text-primary">{{count($colleges)}}</h3>
-                <p>Faculties</p>
+                <p>Faculty Divisions</p>
               </div>
               <!--/column -->
               <div class="col-md-4 text-center">

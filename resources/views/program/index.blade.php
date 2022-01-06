@@ -1,10 +1,13 @@
 @extends('layouts.tri-base')
 
+@section('title', 'list of academic courses offered in Nigerian Universities')
+
+@section('description')
+A list of all university courses offered in Nigeria with Information which includes: the program's curriculum, duration, admission requirements and so on
+@endsection
 
 @section('search')<!-- comment -->
-
 @include('partials.search')
-
 @endsection
 
 
@@ -14,10 +17,12 @@
 
 <section>
     <div class="text-aqua">
-        <h1>Schools offering  courses in Nigeria</h1>            
-        A list of  Universities, Polytechnics and Colleges offering  courses in Nigeria.&nbsp;
-        Whenever possible we provide full details about the courses in each of the schools, including tuition fees, admission requirements, course description and the admission phone number. 
+        <h1>Learn about academic programs(courses) offered in Nigeria</h1>
+        
+        {{ request()->getHttpHost() }} has prepared information on all academic programs (courses) offered in Nigerian Universities.
+        The purpose of this library is to help prospective students choose the right University program (course). The information may include the program's curriculum, duration, admission requirements, difficulty level, On Job Training ( Students' Industrial Work Experience Scheme (SIWES) ) , professional exams and career opportunities for graduates.
 
+        We currently have <strong>{{count($programcount)}}</strong> course information that carry Jamb/UTME subject combinations, 'O' Level/ SSC and 'A' Level direct entry requirements for admission.
         <hr class="m-4">
     </div>
 </section>

@@ -5,9 +5,9 @@
 
 <section>
     <div class="text-aqua">
-        <h1>Schools offering @if(isset($program)){{$program->name}} @endif courses in Nigeria</h1>            
-        A list of  Universities, Polytechnics and Colleges offering @if(isset($program)){{$program->name}} @endif courses in Nigeria.&nbsp;
-        Whenever possible we provide full details about the courses in each of the schools, including tuition fees, admission requirements, course description and the admission phone number. 
+        <h1>Schools offering courses in Nigeria</h1>            
+        Universities offering courses in Nigeria.
+        Whenever possible we provide detailed information about the courses in each of the schools, including tuition fees, admission requirements and course description. 
 
         <hr>
 

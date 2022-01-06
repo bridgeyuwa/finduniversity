@@ -1,6 +1,15 @@
 @extends('layouts.tri-base')
 
 
+@section('title')
+All courses offered by {{$institution->name}}
+@endsection
+
+@section('description')A list of all courses /programs offered by {{$institution->name}}
+@endsection
+
+
+
 @section('search')
 
 @include('partials.search')
@@ -18,10 +27,9 @@
 
 <section>
     <div class="text-aqua">
-        <h1>Schools offering  courses in Nigeria</h1>            
-        A list of  Universities, Polytechnics and Colleges offering  courses in Nigeria.&nbsp;
-        Whenever possible we provide full details about the courses in each of the schools, including tuition fees, admission requirements, course description and the admission phone number. 
-
+        <h1>Courses offered by {{ $institution->name }} </h1>            
+        A list of all courses/programs offered by {{$institution->name}} .&nbsp;
+       
         <hr class="m-4">
         
     </div>

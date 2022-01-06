@@ -10,7 +10,7 @@
         @include('partials.header') 
         
         <div class="container">
-            @yield('search','SEARCH NOT RENDERING')
+            @yield('search')
         </div>
         <section class="wrapper image-wrapper bg-image" data-image-src="/img/photos/bg5.jpg">
 

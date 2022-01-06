@@ -18,6 +18,8 @@ class CreateInstitutionsTable extends Migration
            $table->string('name');
            $table->string('abbr');
            $table->integer('established');
+           $table->integer('fees_low');
+           $table->integer('fees_high');
            
              $table->unsignedBigInteger('state_id');
             $table->unsignedBigInteger('schooltype_id');

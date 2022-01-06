@@ -1,6 +1,12 @@
 @extends('layouts.tri-base')
 
+@section('title')
+All Universities offering {{$program->name}}
+@endsection
 
+@section('description')
+A list of all Universities that offer {{$program->name}}
+@endsection
 
 @section('search')<!-- comment -->
 
@@ -10,8 +16,16 @@
 
 @section('content')
 
+<section>
+    <div class="text-aqua">
+        <h1>All Universities offering {{$program->name}}</h1>            
+        A list of all Universities that offer {{$program->name}}
+       
+        <hr class="m-4">
+        
+    </div>
+</section>
 
-<ul><h3><u><b> {{$program->name}}</b></u></h3></ul>
 
 
 <div class="blog classic-view py-14 py-md-16">

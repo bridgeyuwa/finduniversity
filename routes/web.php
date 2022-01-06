@@ -19,7 +19,7 @@ use App\Http\Controllers\SearchController;
   |
  */
 
-Route::view('/', 'exp');
+//Route::view('/', 'exp');
 Route::view('/studyabroad', 'studyabroad');
 
 

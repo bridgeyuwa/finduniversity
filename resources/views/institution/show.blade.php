@@ -1,5 +1,16 @@
 @extends('layouts.tri-base')
 
+@section('title')
+{{$institution->name}} | {{$institution->abbr}}
+@endsection
+
+
+@section('description')
+History, tuition/school fees, course offered, faculties, ranking, Contact information and more.. 
+@endsection
+
+
+
 
 @section('search')<!-- comment -->
 
@@ -16,8 +27,8 @@
         
         <h1 class="display-6"> {{$institution->name}}</h1>
                     
-        A general overview of  {{$institution->name}} of {{$institution->state->name}} state.
-        Whenever possible we provide full details about the courses in each of the schools, including tuition fees, admission requirements, course description and the admission phone number. 
+        A general overview of  {{$institution->name}} of {{$institution->state->name}} State.
+        Whenever possible we provide details about the courses offered, school/tuition fees, admission requirements, course description, ranking, Contact information and more.. 
 
         <hr class="m-4">
     </div>
@@ -48,6 +59,11 @@
                     </li>
                     <li>
                         <p>
+                            <strong>Established:</strong> 2022
+                        </p>
+                    </li>
+                    <li>
+                        <p>
                             <strong>Entrance exam:</strong> Required (JAMB)
                         </p>
                     </li>
@@ -59,7 +75,7 @@
                     </li>
 
                     <li>
-                        <p><strong>School year:</strong> starts in July</p>
+                        <p><strong>School year:</strong> starts in September <i class="small">(May be different due to Covid-19)</i></p>
                     </li>
 
                 </ul>
@@ -79,6 +95,8 @@
                             <p><strong>Bachelor's degree:</strong></p>
                             <p>
                                 <span class="Amount">₦ 80,000-120,000</span> per year
+                                
+                                <i class="small">(Fees are based on first year and are subject to change.)</i>
 
                             </p>
                         </div><!-- /.fee -->

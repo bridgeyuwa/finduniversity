@@ -58,6 +58,7 @@ class InstitutionController extends Controller {
         $programs = Program::all();
         $colleges = College::all();
         $states = State::all();
+        //dd($institution->name);
 
         return view('institution.show', compact('institution', 'programs', 'colleges', 'states'));
     }

@@ -1,6 +1,13 @@
 @extends('layouts.tri-base')
 
 
+@section('title','Nigerian Universities by Location')
+
+@section('description')
+{{ request()->getHttpHost() }} contains the most comprehensive list of Universities in Nigeria. 
+Schools are grouped into Regions and States.
+@endsection
+
 @section('search')<!-- comment -->
 
 @include('partials.search')
@@ -12,11 +19,11 @@
 
 
 <section>
-    <div class="text-aqua">
-        <h1>Schools offering  courses in Nigeria</h1>            
-        A list of  Universities, Polytechnics and Colleges offering  courses in Nigeria.&nbsp;
-        Whenever possible we provide full details about the courses in each of the schools, including tuition fees, admission requirements, course description and the admission phone number. 
-
+    <div class="text-aqua text-center">
+        <h1>Nigerian Universities by Location</h1>     
+       Universities in Nigeria grouped by Regions and States in Nigeria.
+       
+       View schools by state in each region.
         <hr class="m-4">
         
     </div>

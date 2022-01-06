@@ -1,6 +1,20 @@
 @extends('layouts.tri-base')
 
 
+@section('title')
+{{$program->name}} | course description and admission requirements
+@endsection
+
+@section('description')
+Course description of {{$program->name}}: includes admission requirements ( Jamb/UTME subject combination, SSC /'O' Level and direct entry 'A' Level)
+
+@endsection
+
+
+
+
+
+
 @section('search')<!-- comment -->
 
 @include('partials.search')
@@ -11,12 +25,12 @@
 @section('content')
 
 
-<div class="text-aqua">
+<div class="text-aqua text-center">
 
-    <h1>{{$program->name}} course description</h1>
+    <h1>{{$program->name}}</h1>
+    <h2>Course description and admission requirements</h2>
 
-    A list of  Universities, Polytechnics and Colleges offering @if(isset($program)){{$program->name}} @endif courses in Nigeria.&nbsp;
-    Whenever possible we provide full details about the courses in each of the schools, including tuition fees, admission requirements, course description and the admission phone number. 
+     Detailed course description of {{$program->name}}: includes admission requirements ( Jamb/UTME subject combination, SSC/'O' Level and direct entry 'A' Level requirements.)
 
     <hr class="m-4">
 </div>
@@ -32,6 +46,17 @@
 
 
         <h2>Program Overview</h2>
+        
+        
+        {{$program->direct_entry_req}}  
+        <hr>
+        {{$program->utme_req}}
+        <hr>
+        
+       {{$program->utme_subjects}}
+       
+       <hr>
+        
         <p dir="ltr" style="text-align: left; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Calibri, sans-serif;    white-space: pre-wrap;">The Bachelor of Science in Electronics and Communications Engineering (BS ECE), also known as Bachelor of Science in Electronics Engineering, is </span><span style="font-size: 11pt; font-family: Calibri, sans-serif; font-weight: 700;    white-space: pre-wrap;">a five-year</span><span style="font-size: 11pt; font-family: Calibri, sans-serif;    white-space: pre-wrap;"> college program that focuses on the conceptualization, design, and development of electronic, computer and communication products, systems, services and processes. Its curriculum is built around a strong basic core of mathematics, physics, and engineering provides teaching and training activities in the classroom and in the laboratory exercises.&nbsp;</span></p><br>
 
         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Calibri, sans-serif;    white-space: pre-wrap;">While </span><span style="font-size: 11pt; font-family: Calibri, sans-serif; font-weight: 700;    white-space: pre-wrap;">BS in Electrical Engineering</span><span style="font-size: 11pt; font-family: Calibri, sans-serif;    white-space: pre-wrap;"> deals with the general aspect of design and development of electrical equipment, such as power generators and electric motors, </span><span style="font-size: 11pt; font-family: Calibri, sans-serif; font-weight: 700;    white-space: pre-wrap;">BS Electronics and Communication Engineering, </span><span style="font-size: 11pt; font-family: Calibri, sans-serif;    white-space: pre-wrap;">on the other hand, focuses on the study of design and development of Electronic equipment such as semiconductors and transmitters to be used in distant communications.</span></p><br>
@@ -170,6 +195,8 @@
         </div>
     </div>
 </div>
+</br>
+</br>
 
 @endsection
 
