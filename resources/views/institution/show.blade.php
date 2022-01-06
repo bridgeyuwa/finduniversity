@@ -40,7 +40,7 @@ History, tuition/school fees, course offered, faculties, ranking, Contact inform
 
 
 
-    <div class="card wrapper image-wrapper bg-image" data-image-src="/img/photos/bg22.png">
+    <div class="card wrapper" ">
 
         <div class="card-body">
 

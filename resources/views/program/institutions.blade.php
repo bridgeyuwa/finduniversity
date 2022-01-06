@@ -28,7 +28,7 @@ A list of all Universities that offer {{$program->name}}
 
 
 
-<div class="blog classic-view py-14 py-md-16">
+<div class="blog classic-view py-8 py-md-8">
    
 
 
