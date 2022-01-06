@@ -17,7 +17,7 @@ A list of all university courses offered in Nigeria with Information which inclu
 
 <section>
     <div class="text-aqua">
-        <h1>Learn about academic programs(courses) offered in Nigeria</h1>
+        <h1 class="text-center">Academic programs(courses) offered in Nigeria</h1>
         
         {{ request()->getHttpHost() }} has prepared information on all academic programs (courses) offered in Nigerian Universities.
         The purpose of this library is to help prospective students choose the right University program (course). The information may include the program's curriculum, duration, admission requirements, difficulty level, On Job Training ( Students' Industrial Work Experience Scheme (SIWES) ) , professional exams and career opportunities for graduates.
