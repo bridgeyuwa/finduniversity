@@ -5,7 +5,7 @@
 
 <section>
     <div class="text-aqua">
-        <h1>Schools offering @if(!is_null($program)) "{{$program->name}}" @endif courses in @if(!is_null($state)) {{$state->name}}, @endif Nigeria</h1>            
+        <h1>Schools offering @if(!is_null($program)) {{$program->name}} @endif courses in @if(!is_null($state)) {{$state->name}}, @endif Nigeria</h1>            
         Universities offering courses in Nigeria.
         Whenever possible we provide detailed information about the courses in each of the schools, including tuition fees, admission requirements and course description. 
 

@@ -104,7 +104,6 @@ Course description of {{$program->name}}:  includes admission requirements ( Jam
 
     </div>
 </div>
-</div>
 </br>
 </br>
 

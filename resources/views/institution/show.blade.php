@@ -176,10 +176,36 @@ History, tuition/school fees, course offered, faculties, ranking, Contact inform
             <p class="container"><strong>Address:</strong> {{$institution->address}} {{$institution->state->name}} State </p>
 
         </div>
+        
+        <div class="">
+        <h3>
+            <i class=""></i>
+            Catchments
+        </h3>
+
+        <p class="container"> @if($institution->catchment) 
+            {{$institution->catchment}}   
+            </br> 
+            <i class="small text-center">(Candidates from these states have more chances of gaining admission into the University)</i> </p>
+
+            @else  All States of the Federation      
+            @endif   
+            
+    </div>
+        
+        
+        
     </div>
     <!--/.card-body -->
 
+    
+
+
+
+
+
 </div>
+
 
 <br>
 <br>

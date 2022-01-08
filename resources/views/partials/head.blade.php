@@ -30,19 +30,12 @@
     <link rel="stylesheet" href=" {{url('/css/plugins.css')}} ">
     <link rel="stylesheet" href=" {{url('/css/style.css')}} ">
     <link rel="stylesheet" href=" {{url('/css/colors/blue.css')}} ">
-    <link rel="stylesheet" href=" {{url('/css/picker.min.css')}} ">
-    <script src="http://localhost/js/picker.min.js"></script>
-
+    
 
 
     <!<!-- fonts -->
     <link rel="preload" href=" {{url('css/fonts/thicccboi.css')}} " as="style" onload="this.rel = 'stylesheet'">
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-         $('#ex-search').picker({search : true});
-        });
-    </script>
 
 
 
