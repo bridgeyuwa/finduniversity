@@ -1,4 +1,7 @@
-<section >
+<section>
+
+
+
     <form method="get" action="   {{url("/search")}}">
         <div class="container py-3 ">
 
@@ -29,7 +32,7 @@
                 </div>
 
                 <div class="col-lg p-1">
-                    <select class = "form-select" name="program" id="program" >
+                    <select class = "form-select js-example-basic-single" name="program" id="program" >
                         <option value=""> Any Field </option> 
                         @foreach ($colleges as $college)
                         <optgroup label="{{$college->name}}">   

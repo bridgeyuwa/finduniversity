@@ -22,11 +22,9 @@ All courses offered by {{$institution->name}}
 
 
 
-<h3> {{$institution->name}}</h3>
-
 
 <section>
-    <div class="text-aqua">
+    <div class="text-aqua text-center">
         <h1>Courses offered by {{ $institution->name }} </h1>            
         A list of all courses/programs offered by {{$institution->name}} .&nbsp;
        

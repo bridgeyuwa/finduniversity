@@ -22,7 +22,7 @@
     <meta property="twitter:title" content="@yield('title')">
     <meta property="twitter:description" content="@yield('description')">
     <meta property="twitter:image" content="{{url('/logo.png')}}">
-   
+
 
 
 
@@ -39,8 +39,13 @@
     <link rel="stylesheet" href=" {{url('/css/colors/blue.css')}} ">
 
 
-
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+$(document).ready(function () {
+    $('.js-example-basic-single').select2();
+});
+    </script>
     <!<!-- fonts -->
     <link rel="preload" href=" {{url('css/fonts/thicccboi.css')}} " as="style" onload="this.rel = 'stylesheet'">
 

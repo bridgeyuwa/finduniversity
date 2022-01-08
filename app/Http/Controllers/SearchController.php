@@ -40,9 +40,8 @@ class SearchController extends Controller {
                     })->where('state_id', $location)->where('schooltype_id', $schooltype)->paginate(30);
 
             $institutions->withPath('search?location=' . $location . '&degree=' . $degree . '&program=' . $program_id . '&schooltype=' . $schooltype);
-            echo "All set";
+          
 
-            echo $schooltype;
         } elseif (!isset($location) && isset($program_id) && isset($schooltype)) {
 
             $institutions = Institution::whereHas($programstable, function (Builder $query) use ($program_id) {
@@ -51,36 +50,39 @@ class SearchController extends Controller {
 
             $institutions->withPath('search?location=' . $location . '&degree=' . $degree . '&program=' . $program_id . '&schooltype=' . $schooltype);
 
-            echo "Only Program and schooltype set";
         } elseif (isset($location) && !isset($program_id) && isset($schooltype)) {
 
             $institutions = Institution::where('state_id', $location)->where('schooltype_id', $schooltype)->paginate(30);
             $institutions->withPath('search?location=' . $location . '&degree=' . $degree . '&program=' . $program_id . '&schooltype=' . $schooltype);
-            echo "Only Location and schooltype set";
+           
+            
         } elseif (isset($location) && isset($program_id) && !isset($schooltype)) {
 
             $institutions = Institution::whereHas($programstable, function (Builder $query) use ($program_id) {
                         $query->where('id', '=', $program_id);
                     })->where('state_id', $location)->paginate(30);
             $institutions->withPath('search?location=' . $location . '&degree=' . $degree . '&program=' . $program_id . '&schooltype=' . $schooltype);
-            echo "Location and program set";
+         
+            
         } elseif (isset($location) && !isset($program_id) && !isset($schooltype)) {
 
 
             $institutions = Institution::where('state_id', $location)->paginate(30);
             $institutions->withPath('search?location=' . $location . '&degree=' . $degree . '&program=' . $program_id . '&schooltype=' . $schooltype);
-            echo " Only Location set";
+          
+            
         } elseif (!isset($location) && isset($program_id) && !isset($schooltype)) {
 
             $institutions = Institution::whereHas($programstable, function (Builder $query) use ($program_id) {
                         $query->where('id', '=', $program_id);
                     })->paginate(30);
             $institutions->withPath('search?location=' . $location . '&degree=' . $degree . '&program=' . $program_id . '&schooltype=' . $schooltype);
-            echo "Only program set";
+       
+            
         } elseif (!isset($location) && !isset($program_id) && isset($schooltype)) {
 
             $institutions = Institution::where('schooltype_id', $schooltype)->paginate(30);
-            echo "Only Schooltype set";
+          
 
             $institutions->withPath('search?location=' . $location . '&degree=' . $degree . '&program=' . $program_id . '&schooltype=' . $schooltype);
         } else {

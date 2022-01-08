@@ -20,7 +20,7 @@ class State extends Model
         return $this->hasMany(Lga::class);
     }
     
-    public function regions()
+    public function region()
     {
         return $this->belongsTo(Region::class);
     }

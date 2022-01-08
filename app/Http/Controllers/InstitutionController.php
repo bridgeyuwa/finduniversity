@@ -8,7 +8,7 @@ use App\Models\State;
 use App\Models\Region;
 use App\Models\Program;
 use App\Models\College;
-
+use \NumberFormatter;
 class InstitutionController extends Controller {
 
     public function index() {
@@ -58,9 +58,45 @@ class InstitutionController extends Controller {
         $programs = Program::all();
         $colleges = College::all();
         $states = State::all();
-        //dd($institution->name);
-
-        return view('institution.show', compact('institution', 'programs', 'colleges', 'states'));
+       
+        $state = State::find($institution->state_id);
+        
+        $numberformatter = new Numberformatter('en_US',Numberformatter::ORDINAL);
+        
+       
+        
+     { $region_ins = Region::find($state->region->id)->institutions->where('rank')->sortBy('rank'); //region institutions
+      $regionRank = 0;
+        foreach ($region_ins as $ins)
+        {
+            $regionRank = $regionRank + 1;
+            
+            if($ins->id == $institution->id)
+            {
+                break;
+            }
+        }
+     }
+     
+     
+     
+     
+     { $state_ins = State::find($state->id)->institutions->where('rank')->sortBy('rank'); //region institutions
+      $stateRank = 0;
+        foreach ($state_ins as $ins)
+        {
+            $stateRank = $stateRank + 1;
+            
+            if($ins->id == $institution->id)
+            {
+                break;
+            }
+        }
+     }
+     
+     
+        
+        return view('institution.show', compact('institution', 'programs', 'colleges', 'states','state','numberformatter','regionRank','stateRank'));
     }
-
+    
 }

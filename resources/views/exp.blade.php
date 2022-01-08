@@ -2,11 +2,24 @@
 
 
 @section('content')
+  <script>
+$(document).ready(function () {
+    $('.js-example-basic-single').select2();
+});
+    </script>
+<div class="container">
+    <div class="container">
+        <div class="container">
+            <select class="js-example-basic-single form-select select2-selection__placeholder" name="state">
+                <option value="AL">Alabama</option>
+                ...
+                <option value="WY">Wyoming</option>
+            </select>
 
+            
+            
+        </div>
+    </div>
+</div>
 
-<div class="d-flex flex-column bd-highlight mb-3">
-  <div class="p-2 bd-highlight">Flex item 1</div>
-  <div class="p-2 bd-highlight">Flex item 2</div>
-  <div class="p-2 bd-highlight">Flex item 3</div>
-</div><!-- comment -->
 @endsection

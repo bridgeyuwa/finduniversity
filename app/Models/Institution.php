@@ -17,23 +17,11 @@ class Institution extends Model {
         return $this->belongsToMany(Program::class);
     }
 
-    public function programdegree() {
-        return $this->belongsToMany(Programdegree::class);
-    }
-
-    public function programnd() {
-        return $this->belongsToMany(Programnd::class);
-    }
-
-    public function programnce() {
-        return $this->belongsToMany(Programnce::class);
-    }
-
     public function state() {
         return $this->belongsTo(State::class);
     }
 
-    public function regions() {
+   public function regions() {
         return $this->hasOneThrough(Region::class, State::class);
     }
     
@@ -52,6 +40,6 @@ class Institution extends Model {
 
     public function category() {
         return $this->belongsTo(Category::class);
-    }
+    }    
 
 }
