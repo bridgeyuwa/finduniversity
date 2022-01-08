@@ -2,24 +2,23 @@
 
 
 @section('content')
-  <script>
-$(document).ready(function () {
-    $('.js-example-basic-single').select2();
-});
-    </script>
-<div class="container">
-    <div class="container">
-        <div class="container">
-            <select class="js-example-basic-single form-select select2-selection__placeholder" name="state">
-                <option value="AL">Alabama</option>
-                ...
-                <option value="WY">Wyoming</option>
-            </select>
 
-            
-            
-        </div>
-    </div>
-</div>
+
+
+<select name="basic" id="ex-search" multiple>
+    <option value="1">Shanghai</option>
+    <option value="2">Karachi</option>
+    <option value="3">Beijing</option>
+    <option value="4">Tianjin</option>
+    <option value="5">Istanbul</option>
+    <option value="6">Lagos</option>
+    <option value="7">Tokyo</option>
+    <option value="8">Guangzhou</option>
+    <option value="9">Mumbai</option>
+    <option value="10">Moscow</option>
+    <option value="11">Dhaka</option>
+    <option value="12">Cairo</option>
+</select>
+
 
 @endsection

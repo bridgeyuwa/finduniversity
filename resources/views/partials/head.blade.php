@@ -26,27 +26,26 @@
 
 
 
-
-
-
-
-
-
-
     <!<!-- css styles -->
     <link rel="stylesheet" href=" {{url('/css/plugins.css')}} ">
     <link rel="stylesheet" href=" {{url('/css/style.css')}} ">
     <link rel="stylesheet" href=" {{url('/css/colors/blue.css')}} ">
+    <link rel="stylesheet" href=" {{url('/css/picker.min.css')}} ">
+    <script src="http://localhost/js/picker.min.js"></script>
 
 
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script>
-$(document).ready(function () {
-    $('.js-example-basic-single').select2();
-});
-    </script>
+
     <!<!-- fonts -->
     <link rel="preload" href=" {{url('css/fonts/thicccboi.css')}} " as="style" onload="this.rel = 'stylesheet'">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+         $('#ex-search').picker({search : true});
+        });
+    </script>
+
+
+
+
 
 </head>
