@@ -5,7 +5,7 @@
 
 
     <!-- Primary Meta Tags -->
-    <title>@yield('title','nothing to yield as title')</title>
+    <title> @yield('title','nothing to yield as title')</title>
     <meta name="title" content="@yield('title')">
     <meta name="description" content="@yield('description')">
 
@@ -30,14 +30,11 @@
     <link rel="stylesheet" href=" {{url('/css/plugins.css')}} ">
     <link rel="stylesheet" href=" {{url('/css/style.css')}} ">
     <link rel="stylesheet" href=" {{url('/css/colors/blue.css')}} ">
-    
+
 
 
     <!<!-- fonts -->
     <link rel="preload" href=" {{url('css/fonts/thicccboi.css')}} " as="style" onload="this.rel = 'stylesheet'">
-
-
-
 
 
 

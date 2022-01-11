@@ -3,7 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/finduniversity/app/Http/Controllers/HomeController.php</file>
+            <file>file:/C:/xampp/htdocs/finduniversity/resources/views/partials/head.blade.php</file>
+            <file>file:/C:/xampp/htdocs/finduniversity/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/finduniversity/app/Http/Controllers/CollegeController.php</file>
             <file>file:/C:/xampp/htdocs/finduniversity/resources/views/institution/show.blade.php</file>
+            <file>file:/C:/xampp/htdocs/finduniversity/resources/views/partials/script.blade.php</file>
+            <file>file:/C:/xampp/htdocs/finduniversity/resources/views/search-result.blade.php</file>
+            <file>file:/C:/xampp/htdocs/finduniversity/resources/views/exp.blade.php</file>
+            <file>file:/C:/xampp/htdocs/finduniversity/app/Http/Controllers/ProgramController.php</file>
+            <file>file:/C:/xampp/htdocs/finduniversity/app/Http/Controllers/SearchController.php</file>
+            <file>file:/C:/xampp/htdocs/finduniversity/resources/views/partials/search.blade.php</file>
+            <file>file:/C:/xampp/htdocs/finduniversity/database/migrations/2021_09_11_135056_create_institutions_table.php</file>
             <file>file:/C:/xampp/htdocs/finduniversity/app/Http/Controllers/InstitutionController.php</file>
         </group>
     </open-files>

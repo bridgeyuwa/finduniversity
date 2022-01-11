@@ -1,7 +1,7 @@
 @extends('layouts.tri-base')
 
 @section('title')
-{{$institution->name}} | {{$institution->abbr}}
+{{\Illuminate\Support\Str::title($institution->name)}} | {{$institution->abbr}}
 @endsection
 
 
@@ -27,8 +27,8 @@ History, tuition/school fees, course offered, faculties, ranking, Contact inform
 
         <h1 class="display-6"> {{$institution->name}}</h1>
 
-        A general overview of  {{$institution->name}} of {{$institution->state->name}} State.
-        Whenever possible we provide details about the courses offered, school/tuition fees, admission requirements, course description, ranking, Contact information and more.. 
+        A general overview of  {{$institution->name}} of {{$institution->state->name}} @if($institution->id != 'abuja') State @endif.
+        Whenever possible we provide details about the courses offered, school fees, admission requirements, ranking, Contact information and more.. 
 
         <hr class="m-4">
     </div>
@@ -86,7 +86,7 @@ History, tuition/school fees, course offered, faculties, ranking, Contact inform
             <i class="fas fa-money-bill-alt"></i>
             Tuition Fees
         </h3>
-        <div class="tuition-fees">
+        <div class="container">
 
             <div class="cols">
 
@@ -119,11 +119,6 @@ History, tuition/school fees, course offered, faculties, ranking, Contact inform
 
                 <li><a href=" {{url("institutions/{$institution->id}/courses")}}">Bachelor's courses</a> ({{count($institution->programs)}})</li>
 
-                <li id="#masters"><a href="#masters">Masters courses</a> (3)</li>
-
-                <li id="#phd"><a href="#phd">Doctorate courses </a> (3)</li>
-
-
             </ul>
             <ul>
 
@@ -142,7 +137,7 @@ History, tuition/school fees, course offered, faculties, ranking, Contact inform
 
             <p>Based on Webometrics Web Presence Ranking</p>
 
-            <table class="table table-hover">
+            <table class="table table-hover m-1">
 
                 <tbody><tr>
                         <td>Rank in Nigeria</td>
@@ -176,29 +171,42 @@ History, tuition/school fees, course offered, faculties, ranking, Contact inform
             <p class="container"><strong>Address:</strong> {{$institution->address}} {{$institution->state->name}} State </p>
 
         </div>
-        
-        <div class="">
-        <h3>
-            <i class=""></i>
-            Catchments
-        </h3>
 
-        <p class="container"> @if($institution->catchment) 
-            {{$institution->catchment}}   
-            </br> 
-            <i class="small text-center">(Candidates from these states have more chances of gaining admission into the University)</i> </p>
+        <div class="">
+            <h3>
+                <i class=""></i>
+                Catchments
+            </h3>
+
+            <p class="container"> @if($institution->catchment) 
+                {{$institution->catchment}}   
+                </br> 
+                <i class="small text-center">(Candidates from these states are given special consideration)</i> </p>
 
             @else  All States of the Federation      
             @endif   
-            
-    </div>
-        
-        
-        
+
+        </div>
+
+
+        <div class="">
+            <h3>
+                <i class=""></i>
+
+            </h3>
+
+            <p class="container"> <strong>Website:</strong> <a href="{{$institution->website}}" target="_blank" rel="noopener noreferrer" >{{$institution->website}}</a> </p>
+
+
+
+        </div>
+
+
+
     </div>
     <!--/.card-body -->
 
-    
+
 
 
 

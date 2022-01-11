@@ -30,9 +30,12 @@
 
                 <div class="col-lg p-1">
                     <select class = "form-select" name="program" id="program" >
-                        <option value=""> Any Field </option> 
+                       
+                        <option value="">Any Field</option>
+                        
+                       
                         @foreach ($colleges as $college)
-                        <optgroup label="{{$college->name}}">   
+                        <optgroup label=" FACULTY of {{\Illuminate\Support\Str::upper($college->name)}}">   
 
                             @foreach( App\Models\College::find($college->id)->programs; as $program)
                             <option value="{{$program->id}}">  {{$program->name}}  </option>
