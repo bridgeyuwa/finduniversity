@@ -95,7 +95,7 @@ History, tuition/school fees, course offered, faculties, ranking, Contact inform
                         <p><strong>Bachelor's degree:</strong></p>
                         <p>
                             @if(!is_null($institution->name) && !is_null($institution->established))
-                            <span class="Amount">₦ 80,000-120,000</span> per year 
+                            <span class="Amount">₦ {{number_format($institution->fees_low)}} - {{number_format($institution->fees_high)}}</span> per year 
                             @else
                             (Fees not available)
                             @endif
@@ -141,7 +141,7 @@ History, tuition/school fees, course offered, faculties, ranking, Contact inform
 
                 <tbody><tr>
                         <td>Rank in Nigeria</td>
-                        <td> @if ($institution->rank) {{$numberformatter->format($institution->rank)}} @else NR @endif out of {{ count(App\Models\Institution::all())}} schools</td>
+                        <td> @if ($institutionRank) {{$numberformatter->format($institutionRank)}} @else NR @endif out of {{ count(App\Models\Institution::all())}} schools</td>
                     </tr>
 
                     <tr>

@@ -47,16 +47,9 @@
 
                     <ul>
                         <li>{{$institution->schooltype->name}} {{$institution->category->name}},  {{$institution->state->name}}</li>
-                        <li>Bachelor's ₦ 60,000-90,000 per year</li>
-                        <li>Master's ₦ 22,500-40,000 per year</li>
+                        <li>Bachelor's ₦ {{number_format($institution->fees_low)}} - {{number_format($institution->fees_high)}} per year</li>
                     </ul>
-
-
-
-
-
-
-                </div>
+</div>
                 <!-- /.post-content -->
             </div>
             <!--/.card-body -->
@@ -64,9 +57,9 @@
 
 
                 <div class="d-flex flex-row bd-highlight mb-3 d-flex justify-content-evenly">
-                    <div class="p-2 bd-highlight">Flex item 1</div>
-                    <div class="p-2 bd-highlight">Flex item 2</div>
-                    <div class="p-2 bd-highlight">Flex item 3</div>
+                    <a class="btn btn-outline-primary" href="{{url("/institutions/{$institution->id}")}}">Details</a>
+                    <a class="btn btn-outline-secondary" href="{{url("/institutions/{$institution->id}/courses")}}">Courses</a>
+                    <div class="btn btn-outline-info">Reviews</div>
                 </div>
 
             </div>

@@ -63,9 +63,33 @@ class InstitutionController extends Controller {
         
         $numberformatter = new Numberformatter('en_US',Numberformatter::ORDINAL);
         
+        
+        
+        
+        if($institution->rank) // if institution rank field is not Null
+        
+        {   
+            $inst = Institution::whereNotNull('rank')->orderBy('rank')->get(); //institutions
        
         
-     { $region_ins = Region::find($state->region->id)->institutions->where('rank')->sortBy('rank'); //region institutions
+      $institutionRank = 0;
+        foreach ($inst as $ins)
+        {
+            $institutionRank = $institutionRank + 1;
+            
+            if($ins->id == $institution->id)
+            {
+                break;
+            }
+        }
+     
+     
+    
+        
+        
+       
+        
+     { $region_ins = Region::find($state->region->id)->institutions->whereNotNull('rank')->sortBy('rank'); //region institutions
       $regionRank = 0;
         foreach ($region_ins as $ins)
         {
@@ -81,7 +105,7 @@ class InstitutionController extends Controller {
      
      
      
-     { $state_ins = State::find($state->id)->institutions->where('rank')->sortBy('rank'); //region institutions
+     { $state_ins = State::find($state->id)->institutions->whereNotNull('rank')->sortBy('rank'); //region institutions
       $stateRank = 0;
         foreach ($state_ins as $ins)
         {
@@ -94,9 +118,11 @@ class InstitutionController extends Controller {
         }
      }
      
+     } else { $institutionRank = false; $regionRank = false; $stateRank = false;}
+     
      
         
-        return view('institution.show', compact('institution', 'programs', 'colleges', 'states','state','numberformatter','regionRank','stateRank'));
+        return view('institution.show', compact('institution', 'programs', 'colleges', 'states','state','numberformatter','regionRank','stateRank','institutionRank'));
     }
     
 }
