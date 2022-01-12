@@ -17,12 +17,14 @@
         </div>
         <!-- /.row -->
     </div>
-    <!-- /.container -->
+   
 </section>
 
-<section class="wrapper gradient-7 bg-soft-dark  angled upper-end">
+<section  class="wrapper gradient-7 bg-soft-dark  angled upper-end">
+    
+  
     @include('partials.search')
-
+   
 
     @include('partials.uni-counter')
 
@@ -98,14 +100,14 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-sm-6 p-3">
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">Universities by Location</h2>
-                        
-                        
-                          <ul class="list-group card-text">
+
+
+                        <ul class="list-group card-text">
 
                             <!-- foreachstart -->
 
@@ -117,8 +119,8 @@
                             <li><a  href= " /search?location=31" class="hover" title="universities in Oyo">Oyo<i class="fas fa-arrow-right"></i></a></li>
                             <li><a  href= " /search?location=27" class="hover" title="universities in Niger">Niger<i class="fas fa-arrow-right"></i></a></li>
                         </ul>
-                        
-                        
+
+
                         <a href="institutions/by-location" class="btn btn-primary">View All Locations</a>
                     </div>
                 </div>
@@ -127,8 +129,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">###############</h5>
-                        <p class="card-text">Undecided tile</p>
-                        <a href="#" class="btn btn-primary">Call to Action</a>
+                        <p class="card-text">Advertisement Space </p>
+                        
                     </div>
                 </div>
             </div>
@@ -136,8 +138,16 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">University Ranking</h2>
-                        <p class="card-text">list university ranking ->limit(7)</p>
-                        <a href="#" class="btn btn-primary">View Full Ranking</a>
+                        
+                        <ol class="list-group card-text">
+                            
+                            @foreach($insRank as $ins)
+                            
+                            <li><a  href= " {{url('/institutions/{$ins->id}')}}" class="hover" title="{{$ins->name}}">{{$ins->name}}<i class="fas fa-arrow-right"></i></a> </li>
+                            @endforeach
+                            
+                        </ol>
+                        <a href="{{url('/institutions/ranking')}}" class="btn btn-primary">View Full Ranking</a>
                     </div>
                 </div>
             </div>
@@ -151,6 +161,22 @@
     </div>
 </section>
 
+
+
+<section>
+    <div class="container">
+        <div class=" container">
+            <h2>Your Ultimate Guide to Universities and Courses in Nigeria</h2>
+            <p> {{Illuminate\Support\Str::ucfirst(request()->getHttpHost())}} is a leading resource on higher education in Nigeria.</p>
+            <p>Browse through our comprehensive lists of about {{count($programs)}} courses offered in {{count($institutions)}} universities. Discover <a href="institutions/ranking/">University Rankings</a> and get details on the most common <a href="/programs/">University Courses</a> in the Nigeria.</p>
+            <p>Need to narrow down your search? You can filter the list of Universities using three categories. By <a href="/institutions/by-location/">Location</a>, by Degree Level (from Bachelor's to Doctorate), and by <a href="/institutions/by-program/">Field of Study</a>.</p>
+
+            <hr>
+
+
+        </div>
+    </div>
+</section>
 
 
 @endsection

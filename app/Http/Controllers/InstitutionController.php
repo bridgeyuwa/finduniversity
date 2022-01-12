@@ -51,6 +51,21 @@ class InstitutionController extends Controller {
 
         return view('institution.byprogram', compact('programs', 'colleges', 'states'));
     }
+    
+    
+    
+      public function ranking() {
+          
+          $programs = Program::all();
+        $colleges = College::all();
+        $states = State::all();
+
+  $institutions = Institution::whereNotNull('rank')->orderBy('rank')->get(); //institutions
+    
+
+        return view('institution.ranking', compact('institutions','states','colleges','programs'));
+    }
+    
 
     public function show($id) {
 
@@ -69,6 +84,8 @@ class InstitutionController extends Controller {
         if($institution->rank) // if institution rank field is not Null
         
         {   
+            
+        {
             $inst = Institution::whereNotNull('rank')->orderBy('rank')->get(); //institutions
        
         
@@ -82,7 +99,7 @@ class InstitutionController extends Controller {
                 break;
             }
         }
-     
+        }
      
     
         

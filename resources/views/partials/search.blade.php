@@ -38,7 +38,7 @@
                         <optgroup label=" FACULTY of {{\Illuminate\Support\Str::upper($college->name)}}">   
 
                             @foreach( App\Models\College::find($college->id)->programs; as $program)
-                            <option value="{{$program->id}}">  {{$program->name}}  </option>
+                            <option value="{{$program->id}}">  {{\Illuminate\Support\Str::title($program->name)}}  </option>
                             @endforeach
                         </optgroup>
                         @endforeach

@@ -2,7 +2,7 @@
 
 
 @section('title')
-{{$program->name}} | course description and admission requirements
+{{\Illuminate\Support\Str::title($program->name)}} | course description and admission requirements
 @endsection
 
 @section('description')

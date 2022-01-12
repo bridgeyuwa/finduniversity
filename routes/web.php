@@ -20,14 +20,10 @@ use App\Http\Controllers\SearchController;
  */
 
 //Route::view('/', 'exp');
-Route::view('/studyabroad', 'studyabroad');
-
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('search', [SearchController::class, 'index']);
-
-//Route::get('colleges', [CollegeController::class, 'index']); to be removed
-//Route::get('colleges/{id}', [CollegeController::class, 'show']); to be removed
 
 Route::get('programs', [ProgramController::class, 'index']);
 Route::get('programs/{id}', [ProgramController::class, 'show']);
@@ -36,26 +32,17 @@ Route::get('programs/{id}/institutions', [ProgramController::class, 'institution
 Route::get('institutions', [InstitutionController::class, 'index']);
 Route::get('institutions/by-location', [InstitutionController::class, 'bylocation']);
 Route::get('institutions/by-program', [InstitutionController::class, 'byprogram']);
+Route::get('institutions/ranking', [InstitutionController::class, 'ranking']);
 Route::get('institutions/{id}', [InstitutionController::class, 'show']);
 Route::get('institutions/{id}/courses', [InstitutionController::class, 'programs']);
 
 
+Route::view('/blog', 'exp');
+Route::view('/studyabroad', 'exp');
 
 
 
 
 
-
-
-
-
-
-Route::get('/fakertest', function() {
-    $faker = Faker\Factory::create();
-    $limit = 10;
-    for ($i = 0; $i < $limit; $i++) {
-        echo nl2br('Name: ' . $faker->name . ', Email Address: ' . $faker->unique()->email . ', Contact No: ' . $faker->phoneNumber . "\n");
-    }
-});
 
 

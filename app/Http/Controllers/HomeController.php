@@ -17,7 +17,11 @@ class HomeController extends Controller {
         $institutions = Institution::all();
         $programs = Program::all();
         
-        return view('home', compact('states', 'colleges','institutions','programs'));
+        
+        
+        $insRank = Institution::whereNotNull('rank')->orderBy('rank')->limit(7)->get();
+        
+        return view('home', compact('states', 'colleges','institutions','programs','insRank'));
     }
 
 }
