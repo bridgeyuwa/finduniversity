@@ -14,7 +14,7 @@ class SearchController extends Controller {
     public function index(Request $request) {
 
         $states = State::all(); 
-        $colleges = College::all();
+        $programs = Program::all();
 
 
         $location = $request->input('location'); 
@@ -98,7 +98,7 @@ class SearchController extends Controller {
         $program = Program::find($program_id);
         $state = State::find($location);
 
-        return view('search-result', compact('institutions', 'states', 'colleges', 'program','state'));
+        return view('search-result', compact('institutions', 'states', 'programs', 'program','state'));
     }
 
 }

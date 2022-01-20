@@ -32,21 +32,19 @@
                 <option value="phd" disabled="disabled">College of Education</option>
             </select>
         </div>
+        
+        
         <div class="form-group">
             <label for="formGroupExampleInput2">Field of Study</label>
             <select class = "form-control" name="program" id="program" >
                 <option value=""> Any Field </option> 
-                @foreach ($colleges as $college)
-                
-               <optgroup label="{{$college->name}}">  
-                @foreach( App\Models\College::find($college->id)->programs; as $program)
-                 <option value="{{$program->id}}" @if( $program->id == request()->get('program') )  {{'selected = "true"'}} @endif >{{$program->name}} </option>
+               
+                @foreach($programs as $program)
+                 <option value="{{$program->id}}" @if( $program->id == request()->get('program') )  {{'selected = "true"'}} @endif >{{\Illuminate\Support\Str::title($program->name)}} </option>
                 
                 @endforeach
                 
-               </optgroup>
-
-                @endforeach
+              
 
             </select>
         </div>

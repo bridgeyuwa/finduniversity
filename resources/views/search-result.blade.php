@@ -1,5 +1,11 @@
 @extends('layouts.tri-base')
 
+@section('title', 'FindUniversity Nigeria | Search Result')
+
+@section('description')
+Search resuly of Universities offering courses in Nigeria
+@endsection
+
 
 @section('content')
 
@@ -15,14 +21,7 @@
             <div class="col">
                 <h3>RESULTS ( {{$institutions->total()}})</h3>
             </div>
-            <div class="col">
-                <select class="form-control">
-                    <option value="">Tuition fees: Default</option>
-                    <option value="TuitionFeesBachelors">Tuition fees: low - high</option>
-                    <option value="TuitionFeesMasters">Tuition fees: high - low</option>
-
-                </select>
-            </div>
+            
         </div>
     </div>
 </section>
@@ -82,4 +81,9 @@
 
 @section('aside')
 @include('partials.aside-filter')
+@endsection
+
+
+@section('ads')
+THIS IS AN OVERRIDING ADVERT
 @endsection

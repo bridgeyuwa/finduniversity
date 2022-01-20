@@ -34,14 +34,13 @@
                         <option value="">Any Field</option>
                         
                        
-                        @foreach ($colleges as $college)
-                        <optgroup label=" FACULTY of {{\Illuminate\Support\Str::upper($college->name)}}">   
+                        
+                        
 
-                            @foreach( App\Models\College::find($college->id)->programs; as $program)
+                            @foreach( $programs; as $program)
                             <option value="{{$program->id}}">  {{\Illuminate\Support\Str::title($program->name)}}  </option>
                             @endforeach
-                        </optgroup>
-                        @endforeach
+                        
 
                     </select>
                 </div>

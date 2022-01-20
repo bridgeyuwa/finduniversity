@@ -12,7 +12,7 @@
         <div class="container">
             @yield('search')
         </div>
-        <section class="wrapper image-wrapper bg-image" data-image-src="/img/photos/bg5.jpg">
+        <section class="wrapper image-wrapper bg-image" data-image-src="{{url('/img/photos/bg5.jpg')}}">
 
 
 
@@ -43,7 +43,7 @@
 
                     <!-- Aside Left goes here -->
                     <div class="col-lg-3 sidebar mt-md-6">
-                        @yield('aside','no sidebar to yield')
+                        @yield('ads','No Ads to Yield')
                     </div>
                 </div>
             </div>
