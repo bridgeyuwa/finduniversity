@@ -19,7 +19,7 @@ A list of all university courses offered in Nigeria with Information which inclu
     <div class="text-aqua">
         <h1 class="text-center">Academic programs(courses) offered in Nigeria</h1>
         
-        {{ request()->getHttpHost() }} has prepared information on all academic programs (courses) offered in Nigerian Universities.
+        {{ \Illuminate\Support\Str::title(request()->getHttpHost()) }} has prepared information on all academic programs (courses) offered in Nigerian Universities.
         The purpose of this library is to help prospective students choose the right University program (course). The information may include the program's curriculum, duration, admission requirements, difficulty level, On Job Training ( Students' Industrial Work Experience Scheme (SIWES) ) , professional exams and career opportunities for graduates.
 
         We currently have <strong>{{count($programcount)}}</strong> course information that carry Jamb/UTME subject combinations, 'O' Level/ SSC and 'A' Level direct entry requirements for admission.

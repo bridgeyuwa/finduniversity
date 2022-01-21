@@ -43,12 +43,12 @@ All courses offered by {{$institution->name}}
                 <div class="card">
                     
                     <div class="card-body">
-
+                        <ul>
                         @foreach( App\Models\Institution::find($institution->id)->programs; as $program )
-                        {{$program->name}} </br>
+                        <li>{{\Illuminate\Support\Str::title($program->name)}}</li>
 
                         @endforeach
-
+                        </ul>
                     </div>
                     <!--/.card-body -->
                 </div>
