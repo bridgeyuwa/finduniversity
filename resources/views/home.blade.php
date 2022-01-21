@@ -15,7 +15,7 @@ A platform with a complete online Brochure of all accredited Courses, Colleges, 
             <div class="col-md-10 col-xl-8 mx-auto">
                 <div class="post-header">
 
-                    <h2 class="display-4 mb-3 text-center">FindUniversity</h2>
+                    <h1 class="display-4 mb-3 text-center">FindUniversity Nigeria</h1>
                     <p class="lead fs-lg mb-10 text-center px-md-16 px-lg-21 px-xl-0">Welcome to a platform where you can browse the online Brochure of all accredited Courses, Colleges, and Universities in Nigeria by Location, Degree Level, or Field of Specialization, filter using the categories below.</p>
 
                 </div> 
