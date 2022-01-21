@@ -38,9 +38,9 @@ class InstitutionController extends Controller {
 
         $states = State::all();
         $regions = Region::all();
-        $colleges = College::all();
+        $programs = Program::all();
 
-        return view('institution.bylocation', compact('states', 'regions', 'colleges'));
+        return view('institution.bylocation', compact('states', 'regions', 'programs'));
     }
 
     public function byprogram() {
