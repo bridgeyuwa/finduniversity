@@ -13,7 +13,7 @@
             @yield('search')
         </div>
 
-        <section class="wrapper image-wrapper bg-image" data-image-src="{{url('/img/photos/bg5.jpg')}}">
+        <section class="wrapper image-wrapper bg-image" data-image-src="{{ URL::to('/')}}/img/photos/bg5.jpg">
 
 
 
