@@ -2,12 +2,11 @@
 
 
 @section('title')
-{{\Illuminate\Support\Str::title($program->name)}} | course description and admission requirements
+{{\Illuminate\Support\Str::title($program->name)}}| Details
 @endsection
 
 @section('description')
-Course description of {{$program->name}}:  includes admission requirements ( Jamb/UTME subject combination, SSC /'O' Level and direct entry 'A' Level)
-
+Course description of {{$program->name}}: Jamb/UTME subject combination, SSC/'O' Level, direct entry 'A' Level requirements
 @endsection
 
 
