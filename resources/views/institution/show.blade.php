@@ -195,7 +195,7 @@ History, tuition/school fees, course offered, faculties, ranking, Contact inform
 
             </h3>
 
-            <p class="container"> <strong>Website:</strong> <a href="{{$institution->website}}" target="_blank" rel="noopener noreferrer" >{{$institution->website}}</a> </p>
+            <p class="container"> <strong>Website:</strong> <a href="{{$institution->website}}" target="_blank" >{{$institution->website}}</a> </p>
 
 
 
