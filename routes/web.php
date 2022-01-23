@@ -39,6 +39,9 @@ Route::get('institutions/{id}/courses', [InstitutionController::class, 'programs
 
 Route::view('/blog', 'exp');
 Route::view('/studyabroad', 'exp');
+Route::view('/jealousguy', 'exp');
+
+
 
 
 
