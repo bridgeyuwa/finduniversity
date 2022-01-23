@@ -39,50 +39,7 @@ A platform with a complete online Brochure of all accredited Courses, Colleges, 
 </section>
 
 
-<section class="wrapper bg-soft-primary angled lower-end">
-    <div class="container p-4">
-        <div class="row gx-md-8 gy-8 text-center mb-10 mb-md-17">
-            <div class="col-md-6 col-lg-3 ">
-                <h4>Blog</h4>
-                <p class="mb-3">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                <a href="#" class="btn btn-expand btn-primary rounded-pill">
-                    <i class="uil uil-arrow-right"></i>
-                    <span>Learn More</span>
-                </a>
-            </div>
-            <!--/column -->
-            <div class="col-md-6 col-lg-3">
-                <h4>Study Abroad</h4>
-                <p class="mb-3">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                <a href="#" class="btn btn-expand btn-primary rounded-pill">
-                    <i class="uil uil-arrow-right"></i>
-                    <span>Learn More</span>
-                </a>
-            </div>
-            <!--/column -->
-            <div class="col-md-6 col-lg-3">
-                <h4>Scholarships</h4>
-                <p class="mb-3">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                <a href="#" class="btn btn-expand btn-primary rounded-pill">
-                    <i class="uil uil-arrow-right"></i>
-                    <span>Learn More</span>
-                </a>
-            </div>
-            <!--/column -->
-            <div class="col-md-6 col-lg-3">
-                <h4>Blog</h4>
-                <p class="mb-3">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                <a href="#" class="btn btn-expand btn-primary rounded-pill">
-                    <i class="uil uil-arrow-right"></i>
-                    <span>Learn More</span>
-                </a>
-            </div>
-            <!--/column -->
-        </div>
-        <!--/.row -->
-    </div>
 
-</section>
 
 <section>
     <div class="container">

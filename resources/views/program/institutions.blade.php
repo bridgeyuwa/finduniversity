@@ -1,11 +1,11 @@
 @extends('layouts.tri-base')
 
 @section('title')
-All Universities offering {{$program->name}}
+Coming soon !!!
 @endsection
 
 @section('description')
-A list of all Universities that offer {{$program->name}}
+Study Abroad and Blog coming soon!!!
 @endsection
 
 @section('search')<!-- comment -->
