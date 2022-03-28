@@ -1,5 +1,5 @@
 spec:
-  name: FindUniversity
+  name: finduniversity
   services:
   - environment_slug: php
     git:
@@ -8,5 +8,5 @@ spec:
     envs:
     - key: APP_KEY
       value: "base64:hBhnOB6mZESC9Js6VHft30bJumddQ/r0dNGFy9cwAlI="
-    name: FindUniversity
+    name: finduniversity
     run_command: heroku-php-apache2 public/
